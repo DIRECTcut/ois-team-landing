@@ -1,0 +1,2608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HappyIn.Team - AI Retouching Revolution | Investor Presentation</title>
+    <!-- 
+    IMAGE STRUCTURE:
+    
+    Folder: images/team/ (for team member photos)
+    - anastasia_butova.jpg
+    - sergey_afonchenko.jpg
+    - ksenia_zhivaeva.jpg
+    - galina_khurshudyan.jpg
+    - anastasia_ilyukhina.jpg
+    - vasilina_sergeeva.jpg
+    - tatiana_rogozina.jpg
+    - tatiana_android.jpg
+    - andrei_anufrienko.jpg
+    - vera_volodina.jpg
+    - anna_shumskaia.jpg
+    - tatyana_fyforieva.jpg
+    - anna_podkolzina.jpg
+    - alina_meollman.jpg
+    - team_member_15.jpg
+    - team_member_16.jpg
+    - team_member_17.jpg
+    - team_member_18.jpg
+    - team_member_19.jpg
+    - team_member_20.jpg
+    
+    Folder: images/site/ (for website content)
+    - jewelry_retouching_demo.mp4 (video)
+    - before_after_comparison.jpg
+    - live_processing_platform.jpg
+    - workflow_integration.jpg
+    - jewelry_before_after.jpg
+    - clothing_retouching.jpg
+    - yolo_detection.jpg
+    - segmentation_results.jpg
+    - color_correction.jpg
+    - high_resolution_processing.jpg
+    - interior_geometry.jpg
+    - automotive_retouching.jpg
+    - food_photography.jpg
+    - model_generation.jpg
+    - diffusion_models.jpg
+    - yolo_visualization.jpg
+    - color_checker_tech.jpg
+    - high_res_tech.jpg
+    -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Language Switcher */
+        .language-switcher {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 25px;
+            padding: 10px 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .language-switcher .current-lang {
+            color: var(--dark-blue);
+            font-weight: bold;
+            margin-right: 10px;
+            font-size: 0.9rem;
+        }
+
+        .language-switcher a {
+            color: var(--primary-orange);
+            text-decoration: none;
+            font-weight: 600;
+            padding: 5px 10px;
+            border-radius: 15px;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+        }
+
+        .language-switcher a:hover {
+            background: var(--primary-orange);
+            color: white;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #2C3E50;
+            background: #f8f9fa;
+            word-spacing: normal;
+            letter-spacing: normal;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Color Palette - Updated with darker blues */
+        :root {
+            --primary-red: #E74C3C;
+            --primary-orange: #E67E22;
+            --primary-blue: #1B2947;
+            --primary-green: #2ECC71;
+            --primary-yellow: #F39C12;
+            --primary-teal: #1ABC9C;
+            --dark-blue: #0F1419;
+            --dark-gray-blue: #1A202C;
+            --light-gray: #f8f9fa;
+            --medium-gray: #5D6D7E;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: var(--dark-blue);
+            color: white;
+            padding: 120px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 4.5rem;
+            margin-bottom: 30px;
+            font-weight: 700;
+            background: linear-gradient(45deg, var(--primary-orange), var(--primary-yellow), var(--primary-teal));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-subtitle {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            opacity: 0.95;
+            color: var(--primary-orange);
+        }
+
+        .hero-tagline {
+            font-size: 1.4rem;
+            margin-bottom: 50px;
+            opacity: 0.85;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.8;
+        }
+
+        .motivation-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .motivation-card {
+            background: rgba(255,255,255,0.15);
+            border-radius: 20px;
+            padding: 30px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+            text-align: left;
+            transition: transform 0.3s ease;
+        }
+
+        .motivation-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .motivation-card h3 {
+            color: var(--primary-orange);
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            line-height: 1.3;
+        }
+
+        .motivation-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+            color: white;
+            flex-shrink: 0;
+        }
+
+        /* Section Styles */
+        .section {
+            padding: 80px 0;
+        }
+
+        .section-white {
+            background: white;
+        }
+
+        .section-blue {
+            background: linear-gradient(135deg, var(--dark-blue) 0%, var(--dark-gray-blue) 100%);
+            color: white;
+        }
+
+        .section-light {
+            background: var(--light-gray);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom: 30px;
+            color: var(--dark-blue);
+            position: relative;
+            font-weight: 700;
+        }
+
+        .section-title.white {
+            color: white;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.4rem;
+            margin-bottom: 60px;
+            color: var(--medium-gray);
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .section-subtitle.white {
+            color: rgba(255,255,255,0.9);
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 5px;
+            background: linear-gradient(90deg, var(--primary-orange), var(--primary-yellow));
+            border-radius: 3px;
+        }
+
+        /* Timeline */
+        .timeline-container {
+            position: relative;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .timeline-line {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: linear-gradient(180deg, var(--primary-blue), var(--primary-orange));
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin: 40px 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .timeline-item:nth-child(odd) {
+            justify-content: flex-start;
+        }
+
+        .timeline-item:nth-child(even) {
+            justify-content: flex-end;
+        }
+
+        .timeline-content {
+            background: white;
+            border-radius: 20px;
+            padding: 25px;
+            max-width: 45%;
+            position: relative;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+            border: 1px solid #e9ecef;
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content {
+            margin-right: auto;
+        }
+
+        .timeline-item:nth-child(even) .timeline-content {
+            margin-left: auto;
+        }
+
+        .timeline-date {
+            background: var(--primary-blue);
+            color: white;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 12px;
+        }
+
+        .timeline-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var(--dark-blue);
+            margin-bottom: 10px;
+        }
+
+        .timeline-description {
+            color: var(--medium-gray);
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: 50%;
+            top: 25px;
+            width: 16px;
+            height: 16px;
+            background: var(--primary-orange);
+            border-radius: 50%;
+            transform: translateX(-50%);
+            border: 3px solid white;
+            box-shadow: 0 0 8px rgba(0,0,0,0.2);
+        }
+
+        /* Why We Do This - Updated with better spacing */
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .why-card {
+            background: rgba(255,255,255,0.15);
+            border-radius: 20px;
+            padding: 40px;
+            border: 1px solid rgba(255,255,255,0.2);
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s ease;
+        }
+
+        .why-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .why-card h3 {
+            color: var(--primary-orange);
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            line-height: 1.2;
+        }
+
+        .why-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+            color: white;
+            flex-shrink: 0;
+        }
+
+        /* Market Analysis */
+        .market-analysis {
+            background: white;
+            border-radius: 25px;
+            padding: 50px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+            margin-bottom: 60px;
+            border: 1px solid #e9ecef;
+        }
+
+        .market-overview-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .market-card {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--dark-blue) 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .market-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .market-card:nth-child(2) {
+            background: linear-gradient(135deg, var(--primary-orange) 0%, var(--primary-red) 100%);
+        }
+
+        .market-card:nth-child(3) {
+            background: linear-gradient(135deg, var(--primary-green) 0%, var(--primary-teal) 100%);
+        }
+
+        .market-card:nth-child(4) {
+            background: linear-gradient(135deg, var(--primary-yellow) 0%, var(--primary-orange) 100%);
+        }
+
+        .market-card:nth-child(5) {
+            background: linear-gradient(135deg, var(--primary-red) 0%, var(--primary-orange) 100%);
+        }
+
+        .market-card:nth-child(6) {
+            background: linear-gradient(135deg, var(--primary-teal) 0%, var(--primary-green) 100%);
+        }
+
+        .market-card h3 {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .market-card p {
+            font-size: 1.2rem;
+            opacity: 0.95;
+        }
+
+        /* Regional Data */
+        .regional-analysis {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .region-card {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+            border: 1px solid #e9ecef;
+        }
+
+        .region-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .region-title {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--dark-blue);
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .region-flag {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: white;
+            flex-shrink: 0;
+        }
+
+        .chart-container {
+            width: 200px;
+            height: 200px;
+            margin: 30px auto;
+            position: relative;
+        }
+
+        .donut-chart {
+            width: 100%;
+            height: 100%;
+            transform: rotate(-90deg);
+        }
+
+        .donut-segment {
+            fill: none;
+            stroke-width: 35;
+            stroke-linecap: round;
+            transition: all 0.3s ease;
+        }
+
+        .segment-1 { stroke: var(--primary-red); }
+        .segment-2 { stroke: var(--primary-orange); }
+        .segment-3 { stroke: var(--primary-blue); }
+        .segment-4 { stroke: var(--primary-green); }
+        .segment-5 { stroke: var(--primary-yellow); }
+        .segment-6 { stroke: var(--primary-teal); }
+
+        .chart-label {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--dark-blue);
+        }
+
+        .region-stats {
+            margin-top: 30px;
+        }
+
+        .region-stats p {
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+            text-align: left;
+        }
+
+        .highlight {
+            color: var(--primary-orange);
+            font-weight: bold;
+        }
+
+        /* Competition Analysis */
+        .competition-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 50px;
+            margin-top: 60px;
+        }
+
+        .competition-card {
+            background: rgba(255,255,255,0.15);
+            border-radius: 20px;
+            padding: 40px;
+            border: 1px solid rgba(255,255,255,0.2);
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s ease;
+        }
+
+        .competition-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .competition-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            color: var(--primary-orange);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .competition-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.5rem;
+            color: white;
+            flex-shrink: 0;
+        }
+
+        .pricing-comparison {
+            background: white;
+            color: var(--dark-blue);
+            border-radius: 15px;
+            padding: 30px;
+            margin: 30px 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        /* Demo Section */
+        .demo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 50px;
+            margin-top: 60px;
+        }
+
+        .demo-card {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            border: 1px solid #e9ecef;
+            text-align: center;
+        }
+
+        .demo-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .demo-media {
+            width: 100%;
+            height: 350px;
+            background: var(--light-gray);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            color: var(--medium-gray);
+            border: 3px dashed var(--primary-blue);
+            margin-bottom: 30px;
+            transition: border-color 0.3s ease;
+            cursor: pointer;
+            overflow: hidden;
+        }
+
+        .demo-media img,
+        .demo-media video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 12px;
+        }
+
+        .demo-card:hover .demo-media {
+            border-color: var(--primary-orange);
+        }
+
+        .demo-title {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--dark-blue);
+            margin-bottom: 20px;
+        }
+
+        .demo-description {
+            color: var(--medium-gray);
+            line-height: 1.6;
+            font-size: 1.1rem;
+        }
+
+        /* Technology Stack */
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .tech-card {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            border: 1px solid #e9ecef;
+        }
+
+        .tech-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .tech-image {
+            width: 200px;
+            height: 200px;
+            background: var(--light-gray);
+            border-radius: 15px;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px dashed var(--primary-blue);
+            font-size: 1rem;
+            color: var(--medium-gray);
+            transition: border-color 0.3s ease;
+            overflow: hidden;
+        }
+
+        .tech-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 13px;
+        }
+
+        .tech-card:hover .tech-image {
+            border-color: var(--primary-orange);
+        }
+
+        .tech-card h3 {
+            color: var(--dark-blue);
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+        }
+
+        /* Team Section - Updated with square photos */
+        .team-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .team-stat {
+            text-align: center;
+            padding: 30px;
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-teal) 100%);
+            color: white;
+            border-radius: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .team-stat:nth-child(2) {
+            background: linear-gradient(135deg, var(--primary-orange) 0%, var(--primary-red) 100%);
+        }
+
+        .team-stat:nth-child(3) {
+            background: linear-gradient(135deg, var(--primary-green) 0%, var(--primary-teal) 100%);
+        }
+
+        .team-stat:nth-child(4) {
+            background: linear-gradient(135deg, var(--primary-yellow) 0%, var(--primary-orange) 100%);
+        }
+
+        .team-stat:nth-child(5) {
+            background: linear-gradient(135deg, var(--primary-red) 0%, var(--primary-orange) 100%);
+        }
+
+        .team-stat:hover {
+            transform: translateY(-5px);
+        }
+
+        .team-stat h3 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .team-member {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            transition: transform 0.3s ease;
+            border: 1px solid #e9ecef;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .team-member:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Updated member photo style - square instead of round */
+        .member-photo {
+            width: 120px;
+            height: 120px;
+            background: var(--light-gray);
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            color: var(--medium-gray);
+            overflow: hidden;
+        }
+
+        .member-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 12px;
+        }
+
+        .member-name {
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: var(--dark-blue);
+        }
+
+        .member-role {
+            font-size: 1rem;
+            color: var(--primary-orange);
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .member-description {
+            font-size: 0.9rem;
+            line-height: 1.6;
+            color: var(--medium-gray);
+        }
+
+        /* Work Examples */
+        .examples-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .example-card {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            border: 1px solid #e9ecef;
+        }
+
+        .example-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .example-image {
+            width: 100%;
+            height: 250px;
+            background: var(--light-gray);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            color: var(--medium-gray);
+            border: 2px dashed var(--primary-blue);
+            margin-bottom: 20px;
+            transition: border-color 0.3s ease;
+            overflow: hidden;
+        }
+
+        .example-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 13px;
+        }
+
+        .example-card:hover .example-image {
+            border-color: var(--primary-orange);
+        }
+
+        .example-title {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: var(--dark-blue);
+            margin-bottom: 15px;
+        }
+
+        .example-description {
+            color: var(--medium-gray);
+            line-height: 1.6;
+        }
+
+        /* Client Testimonials */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .testimonial-card {
+            background: rgba(255,255,255,0.15);
+            border-radius: 20px;
+            padding: 30px;
+            border: 1px solid rgba(255,255,255,0.2);
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s ease;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .testimonial-text {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            margin-bottom: 20px;
+            opacity: 0.95;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            font-size: 1.1rem;
+            color: var(--primary-orange);
+            font-weight: bold;
+        }
+
+        .testimonial-company {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            margin-top: 5px;
+        }
+
+        /* Financial Section */
+        .revenue-model {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .revenue-card {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--dark-blue) 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .revenue-card:nth-child(2) {
+            background: linear-gradient(135deg, var(--primary-orange) 0%, var(--primary-red) 100%);
+        }
+
+        .revenue-card:nth-child(3) {
+            background: linear-gradient(135deg, var(--primary-green) 0%, var(--primary-teal) 100%);
+        }
+
+        .revenue-card:nth-child(4) {
+            background: linear-gradient(135deg, var(--primary-yellow) 0%, var(--primary-orange) 100%);
+        }
+
+        .revenue-card:nth-child(5) {
+            background: linear-gradient(135deg, var(--primary-red) 0%, var(--primary-orange) 100%);
+        }
+
+        .revenue-card:nth-child(6) {
+            background: linear-gradient(135deg, var(--primary-teal) 0%, var(--primary-green) 100%);
+        }
+
+        .revenue-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .revenue-amount {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .revenue-period {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+
+        .revenue-details {
+            font-size: 1rem;
+            line-height: 1.6;
+            opacity: 0.95;
+        }
+
+        /* Global Presence */
+        .presence-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .presence-card {
+            background: rgba(255,255,255,0.15);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            border: 1px solid rgba(255,255,255,0.2);
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s ease;
+        }
+
+        .presence-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .presence-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: var(--primary-orange);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .presence-flag {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: white;
+            flex-shrink: 0;
+        }
+
+        .status {
+            display: inline-block;
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .status.active {
+            background: var(--primary-green);
+            color: white;
+        }
+
+        .status.planned {
+            background: var(--primary-orange);
+            color: white;
+        }
+
+        /* Market Size Charts */
+        .size-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .size-card {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+            text-align: center;
+            transition: transform 0.3s ease;
+            border: 1px solid #e9ecef;
+        }
+
+        .size-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .size-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--primary-blue);
+            margin-bottom: 15px;
+        }
+
+        .size-card:nth-child(2) .size-number {
+            color: var(--primary-orange);
+        }
+
+        .size-card:nth-child(3) .size-number {
+            color: var(--primary-green);
+        }
+
+        .size-card:nth-child(4) .size-number {
+            color: var(--primary-red);
+        }
+
+        .size-card:nth-child(5) .size-number {
+            color: var(--primary-teal);
+        }
+
+        .size-card:nth-child(6) .size-number {
+            color: var(--primary-yellow);
+        }
+
+        .size-label {
+            font-size: 1.2rem;
+            color: var(--medium-gray);
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .size-description {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: var(--dark-blue);
+        }
+
+        /* Call to Action - Updated without orange-blue gradient */
+        .cta {
+            background: linear-gradient(135deg, var(--dark-blue) 0%, var(--dark-gray-blue) 100%);
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .cta-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .cta h2 {
+            font-size: 3rem;
+            margin-bottom: 30px;
+            font-weight: 700;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(45deg, var(--primary-green), var(--primary-teal));
+            color: white;
+            padding: 20px 50px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.3rem;
+            transition: all 0.3s ease;
+            margin-top: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+        }
+
+        /* Data Sources */
+        .data-sources {
+            background: white;
+            border-radius: 25px;
+            padding: 50px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+            margin-top: 60px;
+            border: 1px solid #e9ecef;
+        }
+
+        /* Unified Legend Style */
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 12px;
+        }
+
+        .legend-color {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .legend-text {
+            font-size: 1.1rem;
+            color: var(--dark-blue);
+        }
+
+        .legend-text.white {
+            color: white;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 3rem;
+            }
+            
+            .section-title {
+                font-size: 2.2rem;
+            }
+            
+            .container {
+                padding: 0 15px;
+            }
+            
+            .timeline-content {
+                max-width: 90%;
+            }
+            
+            .timeline-line {
+                left: 30px;
+            }
+            
+            .timeline-dot {
+                left: 30px;
+            }
+            
+            .timeline-item {
+                justify-content: flex-start !important;
+            }
+
+            .motivation-grid,
+            .why-grid,
+            .market-overview-grid,
+            .regional-analysis,
+            .competition-grid,
+            .tech-grid,
+            .team-grid,
+            .examples-grid,
+            .testimonials-grid,
+            .revenue-model,
+            .presence-grid,
+            .size-grid,
+            .demo-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Language Switcher -->
+    <div class="language-switcher">
+        <span class="current-lang">EN</span>
+        <a href="index-zh.html">中文</a>
+    </div>
+    <!-- Hero Section with Motivation -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>HappyIn.Team</h1>
+                <p class="hero-subtitle">Rebuild. Retouch. Reinvent.</p>
+                <p class="hero-tagline">We started as professional retouchers frustrated by inefficient tools. Now we're revolutionizing the $50.2B global photography market with AI that understands materials, not just pixels.</p>
+                
+                <div class="motivation-grid">
+                    <div class="motivation-card">
+                        <h3>
+                            <div class="motivation-icon" style="background: var(--primary-red);">1</div>
+                            Our Mission
+                        </h3>
+                        <p>To give retouchers and businesses the tools that we always wished existed – professional-grade AI that understands industry requirements, not mass-market compromises.</p>
+                    </div>
+                    <div class="motivation-card">
+                        <h3>
+                            <div class="motivation-icon" style="background: var(--primary-orange);">2</div>
+                            Our Approach
+                        </h3>
+                        <p>We build specialized solutions for narrow niches where we have deep expertise. 60+ years of combined retouching experience guides every algorithm we create.</p>
+                    </div>
+                    <div class="motivation-card">
+                        <h3>
+                            <div class="motivation-icon" style="background: var(--primary-blue);">3</div>
+                            Our Vision
+                        </h3>
+                        <p>Two focused products: ois.gold for jewelry industry and happyin.ai for professional retouching workflows. Quality over quantity, specialists over generalists.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Company Journey Timeline -->
+    <section class="section section-white">
+        <div class="container">
+            <h2 class="section-title">Our Journey: From Frustration to Innovation</h2>
+            <p class="section-subtitle">How 15+ years of professional retouching experience led us to create industry-changing AI solutions</p>
+            
+            <div class="timeline-container">
+                <div class="timeline-line"></div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2022</div>
+                        <div class="timeline-title">The Beginning: Happy_in_Happy</div>
+                        <div class="timeline-description">
+                            Anastasia Butova, frustrated by 15+ years of repetitive jewelry retouching, started developing neural network courses based on Stable Diffusion. The project began as education but quickly evolved into product development.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">Early 2023</div>
+                        <div class="timeline-title">First Jewelry AI Model</div>
+                        <div class="timeline-description">
+                            Created the world's first automated jewelry retouching model, accelerating work 10x (from 1 hour to 6 minutes per piece). This breakthrough proved that specialized AI could transform professional workflows.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">Mid 2023</div>
+                        <div class="timeline-title">First Major Sale: $8,000</div>
+                        <div class="timeline-description">
+                            Sold customized jewelry retouching system to major jewelry company (diamant-online.ru). This validated market demand and provided capital for further development while proving enterprise-level quality.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">Late 2023</div>
+                        <div class="timeline-title">Product Line Expansion</div>
+                        <div class="timeline-description">
+                            Expanded beyond jewelry: clothing retouching, metal objects, AI model generation. Trained 20+ diffusion models, 100+ LoRAs, and GANs. Became specialists in integrating generative AI into professional workflows.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">Early 2024</div>
+                        <div class="timeline-title">Team Growth & Technical Leadership</div>
+                        <div class="timeline-description">
+                            Sergey Afonchenko joined as CTO. Team expanded to include specialists with experience from major competitors. Applied to Chile startup accelerator (selected among top 900, reached final interviews).
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">Mid 2024</div>
+                        <div class="timeline-title">Client Base & Revenue Growth</div>
+                        <div class="timeline-description">
+                            Established recurring revenue streams: 1,000+ files/month processing, clients across UK, Germany, and Russia. Developed complete jewelry workflow: catalogues, creative photos, realistic models, video generation.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">Late 2024</div>
+                        <div class="timeline-title">Global Expansion Strategy</div>
+                        <div class="timeline-description">
+                            Launched international expansion: NYC manager operational, German office partnership (PICPOINT GmbH), China community engagement initiated, UAE photographer negotiations advanced. Two-brand strategy: ois.gold + happyin.ai.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2025</div>
+                        <div class="timeline-title">Market Disruption Ready</div>
+                        <div class="timeline-description">
+                            35-person team across 5 countries, proprietary technology stack, patent applications filed. Ready to disrupt $50.2B market with Adobe credit restrictions creating massive opportunity for specialized solutions.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI System Demonstration -->
+    <section class="section section-light">
+        <div class="container">
+            <h2 class="section-title">Live AI System Demonstrations</h2>
+            <p class="section-subtitle">See our proprietary retouching technology in action with real before/after examples and live processing demonstrations</p>
+            
+            <div class="demo-grid">
+                <div class="demo-card">
+                    <div class="demo-media">
+                        <video controls>
+                            <source src="images/site/jewelry_retouching_demo.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="demo-title">Jewelry Retouching AI in Action</div>
+                    <div class="demo-description">
+                        Watch our proprietary AI transform raw jewelry photos into professional e-commerce images in under 6 minutes. See metal enhancement, stone optimization, and reflection management happening in real-time.
+                    </div>
+                </div>
+
+                <div class="demo-card">
+                    <div class="demo-media">
+                        <img src="images/site/before_after_comparison.jpg" alt="Before After Comparison">
+                    </div>
+                    <div class="demo-title">Before & After Comparisons</div>
+                    <div class="demo-description">
+                        Interactive before/after slider showcasing 50+ examples of our AI processing across jewelry, clothing, automotive, and interior photography. Professional quality results with 95% time savings.
+                    </div>
+                </div>
+
+                <div class="demo-card">
+                    <div class="demo-media">
+                        <img src="images/site/live_processing_platform.jpg" alt="Live Processing Demo">
+                    </div>
+                    <div class="demo-title">Live Processing Platform</div>
+                    <div class="demo-description">
+                        Upload your own images and see our AI process them live. Experience the speed and quality that has convinced enterprise clients to pay $8,000+ for our systems.
+                    </div>
+                </div>
+
+                <div class="demo-card">
+                    <div class="demo-media">
+                        <img src="images/site/workflow_integration.jpg" alt="Professional Workflow Integration">
+                    </div>
+                    <div class="demo-title">Professional Workflow Integration</div>
+                    <div class="demo-description">
+                        See how our API integrates into existing photography workflows. From bulk marketplace uploads to individual professional retouching - seamless integration with current tools.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Examples -->
+    <section class="section section-white">
+        <div class="container">
+            <h2 class="section-title">AI Technology Demonstrations</h2>
+            <p class="section-subtitle">Real examples of our proprietary neural networks in action across different industries</p>
+            
+            <div class="examples-grid">
+                <div class="example-card">
+                    <div class="example-image">
+                        <img src="images/site/jewelry_before_after.jpg" alt="Jewelry Enhancement Before After">
+                    </div>
+                    <div class="example-title">Jewelry Enhancement AI</div>
+                    <div class="example-description">
+                        Automated metal enhancement, stone optimization, and reflection management. 10x speed improvement: from 60 minutes manual work to 6 minutes total processing time.
+                    </div>
+                </div>
+
+                <div class="example-card">
+                    <div class="example-image">
+                        <img src="images/site/clothing_retouching.jpg" alt="Clothing Retouching Example">
+                    </div>
+                    <div class="example-title">Clothing & Fabric Processing</div>
+                    <div class="example-description">
+                        Fabric smoothing, wrinkle removal, and invisible mannequin creation. Understanding of textile properties and professional fashion photography requirements.
+                    </div>
+                </div>
+
+                <div class="example-card">
+                    <div class="example-image">
+                        <img src="images/site/yolo_detection.jpg" alt="YOLO Detection Visualization">
+                    </div>
+                    <div class="example-title">Computer Vision Pipeline</div>
+                    <div class="example-description">
+                        Real-time object detection and material classification with 99.7% accuracy. Custom YOLO models identify components for targeted processing workflows.
+                    </div>
+                </div>
+
+                <div class="example-card">
+                    <div class="example-image">
+                        <img src="images/site/segmentation_results.jpg" alt="Segmentation Results">
+                    </div>
+                    <div class="example-title">Professional Segmentation</div>
+                    <div class="example-description">
+                        Pixel-perfect edge detection and material isolation. Achieves professional-grade masking quality that previously required hours of manual work.
+                    </div>
+                </div>
+
+                <div class="example-card">
+                    <div class="example-image">
+                        <img src="images/site/color_correction.jpg" alt="Color Correction Example">
+                    </div>
+                    <div class="example-title">Virtual Color Checkers</div>
+                    <div class="example-description">
+                        Patent-pending technology embeds virtual reference points for automated color correction. Eliminates need for physical color charts.
+                    </div>
+                </div>
+
+                <div class="example-card">
+                    <div class="example-image">
+                        <img src="images/site/high_resolution_processing.jpg" alt="High Resolution Processing">
+                    </div>
+                    <div class="example-title">Professional Scale Output</div>
+                    <div class="example-description">
+                        Processing capability up to 15,000 pixels per side. Maintains professional print quality while delivering processing speed improvements.
+                    </div>
+                </div>
+
+                <div class="example-card">
+                    <div class="example-image">
+                        <img src="images/site/interior_geometry.jpg" alt="Interior Geometry Correction">
+                    </div>
+                    <div class="example-title">Interior Photography AI</div>
+                    <div class="example-description">
+                        Automatic perspective correction and geometry alignment. Partnership with renowned interior photographer ensures professional-grade results.
+                    </div>
+                </div>
+
+                <div class="example-card">
+                    <div class="example-image">
+                        <img src="images/site/automotive_retouching.jpg" alt="Automotive Retouching">
+                    </div>
+                    <div class="example-title">Automotive Enhancement</div>
+                    <div class="example-description">
+                        Surface smoothing while preserving detail, reflection management, and multi-lighting stack processing for professional automotive photography.
+                    </div>
+                </div>
+
+                <div class="example-card">
+                    <div class="example-image">
+                        <img src="images/site/food_photography.jpg" alt="Food Photography Enhancement">
+                    </div>
+                    <div class="example-title">Food Photography AI</div>
+                    <div class="example-description">
+                        Specialized understanding of food textures, freshness indicators, and appetizing color profiles for restaurant and food industry marketing.
+                    </div>
+                </div>
+
+                <div class="example-card">
+                    <div class="example-image">
+                        <img src="images/site/model_generation.jpg" alt="AI Model Generation">
+                    </div>
+                    <div class="example-title">AI Model Generation</div>
+                    <div class="example-description">
+                        Creation of realistic digital models for jewelry and clothing visualization. Custom training for brand-specific requirements and demographics.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why We Do This -->
+    <section class="section section-blue">
+        <div class="container">
+            <h2 class="section-title white">Why Professional Retouching Needs Revolution</h2>
+            <p class="section-subtitle white">15+ years of professional experience revealed gaps that only industry specialists could solve</p>
+            
+            <div class="why-grid">
+                <div class="why-card">
+                    <h3>
+                        <div class="why-icon" style="background: var(--primary-red);">TIME</div>
+                        Time Bottlenecks Kill Profits
+                    </h3>
+                    <p style="margin-bottom: 20px;">Traditional jewelry retouching: 60+ minutes per piece. Our AI: 4 minutes total. That's not just efficiency – it's business transformation. Professional retouchers spend 80% of time on repetitive tasks that AI can handle better.</p>
+                    <p><strong>Before:</strong> 1 hour manual work per jewelry piece<br>
+                    <strong>After:</strong> 2 minutes AI + 2 minutes refinement = 95% time savings</p>
+                </div>
+
+                <div class="why-card">
+                    <h3>
+                        <div class="why-icon" style="background: var(--primary-orange);">QUAL</div>
+                        Generic Tools Ignore Professional Standards
+                    </h3>
+                    <p style="margin-bottom: 20px;">Midjourney outputs 1,500 pixels max. Professionals need up to 15,000 pixels. Adobe's new credit limits frustrate professionals. Mass-market AI doesn't understand material properties, lighting requirements, or industry standards.</p>
+                    <p><strong>Gap:</strong> No AI understands that jewelry metal reflectivity differs from fabric texture or automotive paint. We built the first material-aware retouching AI.</p>
+                </div>
+
+                <div class="why-card">
+                    <h3>
+                        <div class="why-icon" style="background: var(--primary-blue);">BLUE</div>
+                        First-to-Market in Blue Ocean Niches
+                    </h3>
+                    <p style="margin-bottom: 20px;">While others build generic tools, we dominate ignored niches. Jewelry automation didn't exist until we created it. Invisible mannequins, automotive detailing, interior geometry correction – massive markets with zero competition.</p>
+                    <p><strong>Strategy:</strong> Own narrow, profitable niches where large players can't compete on specialization depth.</p>
+                </div>
+
+                <div class="why-card">
+                    <h3>
+                        <div class="why-icon" style="background: var(--primary-green);">SCALE</div>
+                        Marketplace Volume Demands Automation
+                    </h3>
+                    <p style="margin-bottom: 20px;">eBay: 2.3B listings. Amazon: 600M+ products. China marketplaces: tens of millions. Manual retouching can't scale. Current solutions are too expensive or too low-quality for professional use.</p>
+                    <p><strong>Opportunity:</strong> Our API can process millions of images daily at $1/image with 95% margins.</p>
+                </div>
+
+                <div class="why-card">
+                    <h3>
+                        <div class="why-icon" style="background: var(--primary-yellow);">COST</div>
+                        Quality Standards vs Cost Pressure
+                    </h3>
+                    <p style="margin-bottom: 20px;">Businesses need professional quality at consumer prices. $15-50/hour for manual retouching vs $1/image for our AI. But quality must match or exceed human work – only possible with industry-specific training.</p>
+                    <p><strong>Solution:</strong> Our 60+ years combined experience creates training datasets that produce professional-grade results.</p>
+                </div>
+
+                <div class="why-card">
+                    <h3>
+                        <div class="why-icon" style="background: var(--primary-teal);">GLOB</div>
+                        Global Reach Requires Local Expertise
+                    </h3>
+                    <p style="margin-bottom: 20px;">Every market has different standards, workflows, and partnerships. Our global team in 5 countries provides local expertise while maintaining technical consistency. This allows us to serve markets that competitors can't access effectively.</p>
+                    <p><strong>Advantage:</strong> Buenos Aires HQ, NYC operations, German partnerships, China expansion, UAE negotiations – true global coverage.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Market Analysis -->
+    <section class="section section-white">
+        <div class="container">
+            <h2 class="section-title">Global Market Opportunity</h2>
+            <p class="section-subtitle">Massive addressable market with proven demand and untapped potential across multiple verticals</p>
+            
+            <div class="market-analysis">
+                <h3 style="text-align: center; margin-bottom: 40px; color: var(--dark-blue); font-size: 2rem;">Market Size by Segment</h3>
+                <div class="market-overview-grid">
+                    <div class="market-card">
+                        <h3>$50.2B</h3>
+                        <p>Global Digital Photography Market (2024)</p>
+                    </div>
+                    <div class="market-card">
+                        <h3>$886M</h3>
+                        <p>Photo Editing Software Market (2032)</p>
+                    </div>
+                    <div class="market-card">
+                        <h3>$342M</h3>
+                        <p>E-commerce Photography Market (2031)</p>
+                    </div>
+                    <div class="market-card">
+                        <h3>11.1%</h3>
+                        <p>Annual Growth Rate (CAGR)</p>
+                    </div>
+                    <div class="market-card">
+                        <h3>2.3B</h3>
+                        <p>eBay Active Listings Requiring Photos</p>
+                    </div>
+                    <div class="market-card">
+                        <h3>$60B+</h3>
+                        <p>Global Fashion Industry Photography</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Regional Market Analysis -->
+            <h3 style="text-align: center; margin: 60px 0 40px; color: var(--dark-blue); font-size: 2.2rem;">Global Market Distribution</h3>
+            
+            <!-- Unified Regional Chart -->
+            <div style="display: flex; justify-content: center; align-items: center; margin: 60px 0; flex-wrap: wrap; gap: 60px;">
+                <div style="width: 400px; height: 400px; position: relative;">
+                    <svg class="donut-chart" viewBox="0 0 200 200" style="width: 100%; height: 100%;">
+                        <!-- North America: 40% -->
+                        <circle cx="100" cy="100" r="75" class="donut-segment segment-1" stroke-dasharray="188, 283" stroke-dashoffset="0"></circle>
+                        <!-- Europe: 30% -->
+                        <circle cx="100" cy="100" r="75" class="donut-segment segment-2" stroke-dasharray="141, 330" stroke-dashoffset="-188"></circle>
+                        <!-- Asia-Pacific: 15% -->
+                        <circle cx="100" cy="100" r="75" class="donut-segment segment-3" stroke-dasharray="71, 400" stroke-dashoffset="-329"></circle>
+                        <!-- China (separate): 16% -->
+                        <circle cx="100" cy="100" r="75" class="donut-segment segment-4" stroke-dasharray="75, 396" stroke-dashoffset="-400"></circle>
+                        <!-- India: 8% -->
+                        <circle cx="100" cy="100" r="75" class="donut-segment segment-5" stroke-dasharray="38, 433" stroke-dashoffset="-475"></circle>
+                        <!-- LATAM: 5% -->
+                        <circle cx="100" cy="100" r="75" class="donut-segment segment-6" stroke-dasharray="24, 447" stroke-dashoffset="-513"></circle>
+                    </svg>
+                    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center;">
+                        <div style="font-size: 2.5rem; font-weight: bold; color: var(--dark-blue);">$50.2B</div>
+                        <div style="font-size: 1.2rem; color: var(--medium-gray);">Total Market</div>
+                    </div>
+                </div>
+                
+                <!-- Legend -->
+                <div>
+                    <div style="display: flex; flex-direction: column; gap: 15px;">
+                        <div class="legend-item">
+                            <div class="legend-color" style="background: var(--primary-red);"></div>
+                            <span class="legend-text"><strong>North America</strong> - 40% ($20.1B)</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color" style="background: var(--primary-orange);"></div>
+                            <span class="legend-text"><strong>Europe</strong> - 30% ($15.1B)</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color" style="background: var(--primary-blue);"></div>
+                            <span class="legend-text"><strong>Asia-Pacific</strong> - 15% ($7.5B)</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color" style="background: var(--primary-green);"></div>
+                            <span class="legend-text"><strong>China</strong> - 16% ($8.2B)</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color" style="background: var(--primary-yellow);"></div>
+                            <span class="legend-text"><strong>India</strong> - 8% ($4.0B)</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color" style="background: var(--primary-teal);"></div>
+                            <span class="legend-text"><strong>Latin America</strong> - 5% ($2.5B)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Regional Analysis Grid -->
+            <div class="regional-analysis">
+                <div class="region-card">
+                    <h3 class="region-title">
+                        <div class="region-flag" style="background: var(--primary-red);">US</div>
+                        North America
+                    </h3>
+                    <div class="region-stats">
+                        <p><span class="highlight">$20.1B</span> market size with 2.4% CAGR</p>
+                        <p><span class="highlight">1M+</span> jewelry images processed annually</p>
+                        <p><span class="highlight">115,000</span> professional photographers (BLS 2022)</p>
+                        <p><span class="highlight">134M</span> eBay buyers, 37.8% Amazon e-commerce share</p>
+                        <p><span class="highlight">NYC Manager:</span> 8-month track record, $1K+ monthly revenue</p>
+                        <p><span class="highlight">Proven revenue:</span> $8K initial enterprise sale</p>
+                    </div>
+                </div>
+
+                <div class="region-card">
+                    <h3 class="region-title">
+                        <div class="region-flag" style="background: var(--primary-orange);">EU</div>
+                        Europe
+                    </h3>
+                    <div class="region-stats">
+                        <p><span class="highlight">$15.1B</span> market size across 27 countries</p>
+                        <p><span class="highlight">500K+</span> jewelry images processed annually</p>
+                        <p><span class="highlight">50,000</span> professional photographers (FEP)</p>
+                        <p><span class="highlight">PICPOINT GmbH:</span> 15+ years German market experience</p>
+                        <p><span class="highlight">Marketplace expertise:</span> Established e-commerce integrations</p>
+                        <p><span class="highlight">Premium pricing:</span> £10-30 per product photo in UK</p>
+                    </div>
+                </div>
+
+                <div class="region-card">
+                    <h3 class="region-title">
+                        <div class="region-flag" style="background: var(--primary-green);">CN</div>
+                        China
+                    </h3>
+                    <div class="region-stats">
+                        <p><span class="highlight">$8.2B</span> individual market (largest single country)</p>
+                        <p><span class="highlight">5M+</span> jewelry images processed annually</p>
+                        <p><span class="highlight">Tens of millions</span> e-commerce photos (Taobao, JD, Tmall)</p>
+                        <p><span class="highlight">Manufacturing hub:</span> Global export photography needs</p>
+                        <p><span class="highlight">Community engagement:</span> Active discussions with AI institutions</p>
+                        <p><span class="highlight">Growth rate:</span> 6.2% CAGR fastest in region</p>
+                    </div>
+                </div>
+
+                <div class="region-card">
+                    <h3 class="region-title">
+                        <div class="region-flag" style="background: var(--primary-yellow);">IN</div>
+                        India + Asia
+                    </h3>
+                    <div class="region-stats">
+                        <p><span class="highlight">$11.5B</span> combined market size</p>
+                        <p><span class="highlight">3M+</span> jewelry images annually</p>
+                        <p><span class="highlight">$6.8B</span> photography services market in India</p>
+                        <p><span class="highlight">8.1% CAGR</span> fastest growing photography market</p>
+                        <p><span class="highlight">74.8%</span> smartphone penetration driving mobile photography</p>
+                        <p><span class="highlight">Outsourcing hub:</span> Global retouching services destination</p>
+                    </div>
+                </div>
+
+                <div class="region-card">
+                    <h3 class="region-title">
+                        <div class="region-flag" style="background: var(--primary-teal);">BR</div>
+                        Latin America
+                    </h3>
+                    <div class="region-stats">
+                        <p><span class="highlight">$2.5B</span> market size with headquarters advantage</p>
+                        <p><span class="highlight">300K+</span> jewelry images processed annually</p>
+                        <p><span class="highlight">30-50K</span> professional photographers</p>
+                        <p><span class="highlight">Brazil:</span> $1.1B (42% of regional market)</p>
+                        <p><span class="highlight">Buenos Aires HQ:</span> Strategic cost and talent advantages</p>
+                        <p><span class="highlight">E-commerce growth:</span> Rapid digital transformation</p>
+                    </div>
+                </div>
+
+                <div class="region-card">
+                    <h3 class="region-title">
+                        <div class="region-flag" style="background: var(--primary-blue);">AE</div>
+                        UAE + Middle East
+                    </h3>
+                    <div class="region-stats">
+                        <p><span class="highlight">$3.5B</span> estimated photography market</p>
+                        <p><span class="highlight">Gateway market</span> to Africa and Middle East</p>
+                        <p><span class="highlight">LOI signed</span> for regional representation agreement</p>
+                        <p><span class="highlight">Advanced negotiations</span> with renowned regional photographer</p>
+                        <p><span class="highlight">20+ years</span> local partner experience</p>
+                        <p><span class="highlight">Strategic expansion:</span> Access to emerging African markets</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Competition Analysis -->
+    <section class="section section-blue">
+        <div class="container">
+            <h2 class="section-title white">Competitive Landscape & Market Disruption</h2>
+            <p class="section-subtitle white">Fragmented market with expensive solutions creates massive opportunity for specialized alternatives</p>
+            
+            <!-- Competitive Market Share Visualization -->
+            <div style="display: flex; justify-content: center; align-items: center; margin: 60px 0; flex-wrap: wrap; gap: 60px;">
+                <div style="width: 400px; height: 400px; position: relative;">
+                    <svg class="donut-chart" viewBox="0 0 200 200" style="width: 100%; height: 100%;">
+                        <!-- Adobe: 45% -->
+                        <circle cx="100" cy="100" r="75" class="donut-segment segment-1" stroke-dasharray="212, 259" stroke-dashoffset="0"></circle>
+                        <!-- Retouch4me: 15% -->
+                        <circle cx="100" cy="100" r="75" class="donut-segment segment-2" stroke-dasharray="71, 400" stroke-dashoffset="-212"></circle>
+                        <!-- Other Solutions: 25% -->
+                        <circle cx="100" cy="100" r="75" class="donut-segment segment-3" stroke-dasharray="118, 353" stroke-dashoffset="-283"></circle>
+                        <!-- Manual Work: 12% -->
+                        <circle cx="100" cy="100" r="75" class="donut-segment segment-4" stroke-dasharray="57, 414" stroke-dashoffset="-401"></circle>
+                        <!-- Our Opportunity: 3% -->
+                        <circle cx="100" cy="100" r="75" class="donut-segment segment-5" stroke-dasharray="14, 457" stroke-dashoffset="-458"></circle>
+                    </svg>
+                    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center;">
+                        <div style="font-size: 2rem; font-weight: bold; color: white;">Market</div>
+                        <div style="font-size: 1.2rem; color: rgba(255,255,255,0.8);">Distribution</div>
+                    </div>
+                </div>
+                
+                <!-- Legend -->
+                <div>
+                    <div style="display: flex; flex-direction: column; gap: 15px;">
+                        <div class="legend-item">
+                            <div class="legend-color" style="background: var(--primary-red);"></div>
+                            <span class="legend-text white"><strong>Adobe Solutions</strong> - 45% (Credit limitations)</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color" style="background: var(--primary-orange);"></div>
+                            <span class="legend-text white"><strong>Retouch4me</strong> - 15% ($124+ per plugin)</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color" style="background: var(--primary-blue);"></div>
+                            <span class="legend-text white"><strong>Other Tools</strong> - 25% (Fragmented)</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color" style="background: var(--primary-green);"></div>
+                            <span class="legend-text white"><strong>Manual Work</strong> - 12% (Expensive)</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color" style="background: var(--primary-yellow);"></div>
+                            <span class="legend-text white"><strong>Our Opportunity</strong> - 3% (Blue Ocean)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Detailed Competitive Analysis -->
+            <div class="competition-grid">
+                <div class="competition-card">
+                    <h3>
+                        <div class="competition-icon" style="background: var(--primary-red);">ADBE</div>
+                        Adobe's Vulnerability: Credit Crisis 2024
+                    </h3>
+                    <p style="margin-bottom: 20px;">Adobe introduced restrictive generative credit systems in 2024, limiting professionals to 25-1000 credits per month. PetaPixel and industry forums report widespread complaints about reduced functionality and increased costs.</p>
+                    
+                    <h4 style="color: var(--primary-orange); margin: 20px 0 10px;">Our Alternative Advantage:</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li>• <strong>Unlimited processing</strong> vs Adobe's credit restrictions</li>
+                        <li>• <strong>Specialized models</strong> vs generic generative fill</li>
+                        <li>• <strong>Industry-specific intelligence</strong> vs one-size-fits-all</li>
+                        <li>• <strong>Professional resolution</strong> up to 15,000 pixels</li>
+                        <li>• <strong>Subscription model</strong> vs restrictive credit purchasing</li>
+                    </ul>
+                    
+                    <div style="background: rgba(231, 76, 60, 0.2); padding: 20px; border-radius: 10px; margin-top: 20px;">
+                        <h4 style="color: var(--primary-red);">Market Disruption Opportunity</h4>
+                        <p>Adobe's credit limitations create immediate demand for unlimited, specialized alternatives. Professionals are actively seeking solutions – we provide exactly what they need.</p>
+                    </div>
+                </div>
+
+                <div class="competition-card">
+                    <h3>
+                        <div class="competition-icon" style="background: var(--primary-orange);">R4ME</div>
+                        Retouch4me: Premium Pricing Vulnerability
+                    </h3>
+                    <p style="margin-bottom: 20px;">Current market leader charges $124-149 per plugin with 50K+ user base. Full professional suite costs $1,000+. Our subscription model at $5/month provides complete access to all tools.</p>
+                    
+                    <div class="pricing-comparison">
+                        <h4 style="margin-bottom: 20px; text-align: center;">Revenue Capture Potential</h4>
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px;">
+                            <div style="background: var(--primary-red); color: white; padding: 20px; border-radius: 10px; text-align: center;">
+                                <h4>Retouch4me</h4>
+                                <p><strong>50,000</strong> users</p>
+                                <p>$124+ per plugin</p>
+                            </div>
+                            <div style="background: var(--primary-green); color: white; padding: 20px; border-radius: 10px; text-align: center;">
+                                <h4>Our Target</h4>
+                                <p><strong>1-5%</strong> conversion</p>
+                                <p>$5/month all tools</p>
+                            </div>
+                            <div style="background: var(--primary-orange); color: white; padding: 20px; border-radius: 10px; text-align: center;">
+                                <h4>Annual Revenue</h4>
+                                <p><strong>$30K-$150K</strong></p>
+                                <p>Conservative estimate</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h4 style="color: var(--primary-orange); margin: 20px 0 10px;">Competitive Advantages:</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li>• <strong>95% cost reduction:</strong> $5/month vs $1,000+ suite</li>
+                        <li>• <strong>Better technology:</strong> Material-specific AI vs generic tools</li>
+                        <li>• <strong>Professional focus:</strong> Industry requirements vs mass market</li>
+                        <li>• <strong>Continuous updates:</strong> Subscription model enables rapid iteration</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Processing Volume Analysis -->
+    <section class="section section-light">
+        <div class="container">
+            <h2 class="section-title">Image Processing Volume Analysis</h2>
+            <p class="section-subtitle">Quantified market opportunities across verticals with verified processing volumes</p>
+            
+            <div class="size-grid">
+                <div class="size-card">
+                    <div class="size-number">15M+</div>
+                    <div class="size-label">Marketplace Images Annually</div>
+                    <div class="size-description">
+                        <strong>E-commerce platforms globally</strong><br>
+                        • Amazon: 600M+ products requiring images<br>
+                        • eBay: 2.3B active listings with photos<br>
+                        • China (Taobao/JD): Tens of millions<br>
+                        • API processing potential: 3.2M images/year
+                    </div>
+                </div>
+
+                <div class="size-card">
+                    <div class="size-number">9.8M</div>
+                    <div class="size-label">Jewelry Images Potential</div>
+                    <div class="size-description">
+                        <strong>First-to-market automation</strong><br>
+                        • USA/Canada: 1M images/year<br>
+                        • China: 5M images/year<br>
+                        • India/Asia: 3M images/year<br>
+                        • Europe: 500K images/year<br>
+                        • LATAM: 300K images/year
+                    </div>
+                </div>
+
+                <div class="size-card">
+                    <div class="size-number">2M+</div>
+                    <div class="size-label">Wedding Photos Annual</div>
+                    <div class="size-description">
+                        <strong>Professional event photography</strong><br>
+                        • USA: 2M+ weddings annually<br>
+                        • Average: 500+ photos per wedding<br>
+                        • Professional retouching standard<br>
+                        • Global expansion multiplier effect
+                    </div>
+                </div>
+
+                <div class="size-card">
+                    <div class="size-number">400K+</div>
+                    <div class="size-label">Professional Photographers</div>
+                    <div class="size-description">
+                        <strong>Global professional base</strong><br>
+                        • USA/Canada: 115,000 (BLS 2022)<br>
+                        • Europe: 50,000 (FEP)<br>
+                        • China: 100,000+<br>
+                        • India/Asia: 100,000+<br>
+                        • LATAM: 30-50,000
+                    </div>
+                </div>
+
+                <div class="size-card">
+                    <div class="size-number">50-75%</div>
+                    <div class="size-label">Images Requiring Retouching</div>
+                    <div class="size-description">
+                        <strong>Professional standards compliance</strong><br>
+                        • Marketplace quality requirements<br>
+                        • Brand consistency needs<br>
+                        • Conversion optimization demands<br>
+                        • Professional portfolio standards
+                    </div>
+                </div>
+
+                <div class="size-card">
+                    <div class="size-number">95%</div>
+                    <div class="size-label">Gross Profit Margins</div>
+                    <div class="size-description">
+                        <strong>Scalable unit economics</strong><br>
+                        • Current cost: $0.05/image<br>
+                        • Target cost: $0.02/image<br>
+                        • Selling price: $1.00+/image<br>
+                        • 50x advantage vs manual processing
+                    </div>
+                </div>
+
+                <div class="size-card">
+                    <div class="size-number">24/7</div>
+                    <div class="size-label">Automated Processing</div>
+                    <div class="size-description">
+                        <strong>Non-stop global operations</strong><br>
+                        • No human labor limitations<br>
+                        • Consistent quality standards<br>
+                        • Instant scalability to millions<br>
+                        • Multi-timezone service coverage
+                    </div>
+                </div>
+
+                <div class="size-card">
+                    <div class="size-number">100+</div>
+                    <div class="size-label">Chat Bot Users Monthly</div>
+                    <div class="size-description">
+                        <strong>Proven market validation</strong><br>
+                        • Telegram/WhatsApp integration active<br>
+                        • Direct consumer access working<br>
+                        • Proven willingness to pay<br>
+                        • Scalable mobile-first approach
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Stack -->
+    <section class="section section-white">
+        <div class="container">
+            <h2 class="section-title">Proprietary Technology Portfolio</h2>
+            <p class="section-subtitle">20+ trained models, 100+ LoRAs, patent-pending innovations creating 3+ year competitive moat</p>
+            
+            <div class="tech-grid">
+                <div class="tech-card">
+                    <div class="tech-image">
+                        <img src="images/site/diffusion_models.jpg" alt="Diffusion Models Illustration">
+                    </div>
+                    <h3>Custom Diffusion Models</h3>
+                    <p>Industry-specific SDXL and Flux adaptations trained on 2.5M+ professionally annotated images. Each model understands material properties, lighting conditions, and professional standards for jewelry, clothing, and automotive industries.</p>
+                </div>
+
+                <div class="tech-card">
+                    <div class="tech-image">
+                        <img src="images/site/yolo_visualization.jpg" alt="YOLO Detection Visualization">
+                    </div>
+                    <h3>Computer Vision Pipeline</h3>
+                    <p>Real-time object detection with 99.7% accuracy in material classification. Custom-trained YOLO models identify jewelry components, fabric types, and product categories for targeted processing workflows.</p>
+                </div>
+
+                <div class="tech-card">
+                    <div class="tech-image">
+                        <img src="images/site/color_checker_tech.jpg" alt="Color Checker Technology">
+                    </div>
+                    <h3>Virtual Color Checkers</h3>
+                    <p>Patent-pending technology embeds virtual reference points for automated color correction. Eliminates need for physical color charts while maintaining professional accuracy across all lighting conditions.</p>
+                </div>
+
+                <div class="tech-card">
+                    <div class="tech-image">
+                        <img src="images/site/high_res_tech.jpg" alt="High Resolution Technology">
+                    </div>
+                    <h3>Professional Scale Processing</h3>
+                    <p>Proprietary algorithms handle images up to 15,000 pixels per side. Memory-efficient tiling maintains quality at professional scales with optimized processing speed for commercial workflows.</p>
+                </div>
+            </div>
+
+            <div style="margin-top: 60px; padding: 40px; background: var(--light-gray); border-radius: 20px; border: 1px solid #e9ecef;">
+                <h3 style="color: var(--dark-blue); margin-bottom: 30px; text-align: center;">Technical Differentiation</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px;">
+                    <div>
+                        <h4 style="color: var(--primary-orange); margin-bottom: 15px;">Unique Dataset Creation</h4>
+                        <p style="color: var(--medium-gray);">60+ years combined retouching experience creates proprietary training datasets. Our team knows exactly what professional results should look like across industries.</p>
+                    </div>
+                    <div>
+                        <h4 style="color: var(--primary-orange); margin-bottom: 15px;">Material Physics Understanding</h4>
+                        <p style="color: var(--medium-gray);">Unlike generic AI tools, our models understand physics of light interaction: metal reflectivity coefficients, fabric absorption patterns, glass refraction indices.</p>
+                    </div>
+                    <div>
+                        <h4 style="color: var(--primary-orange); margin-bottom: 15px;">Professional Workflow Focus</h4>
+                        <p style="color: var(--medium-gray);">Every feature addresses real professional pain points, not theoretical use cases. 15+ years of hands-on industry experience drives every technical decision.</p>
+                    </div>
+                    <div>
+                        <h4 style="color: var(--primary-orange); margin-bottom: 15px;">Patent Portfolio Protection</h4>
+                        <p style="color: var(--medium-gray);">Multiple patent applications for virtual color checkers, automated jewelry enhancement, and material-aware super-resolution create strong IP moat.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Global Presence - Updated with UK and Asia -->
+    <section class="section section-blue">
+        <div class="container">
+            <h2 class="section-title white">Global Operations & Strategic Partnerships</h2>
+            <p class="section-subtitle white">Seven-country presence with local expertise and established partnerships across key markets</p>
+            
+            <div class="presence-grid">
+                <div class="presence-card">
+                    <h3>
+                        <div class="presence-flag" style="background: var(--primary-teal);">AR</div>
+                        Buenos Aires, Argentina
+                    </h3>
+                    <span class="status active">Headquarters</span>
+                    <p>Main operations center with 35-person team including 15+ developers, 2 PhD researchers, and marketing specialists. Strategic location provides <strong>70% cost advantage</strong> vs Silicon Valley while accessing top Latin American talent pool.</p>
+                </div>
+                
+                <div class="presence-card">
+                    <h3>
+                        <div class="presence-flag" style="background: var(--primary-red);">US</div>
+                        New York, USA
+                    </h3>
+                    <span class="status active">Active Operations</span>
+                    <p>Dedicated market manager with <strong>8-month proven track record</strong> working with local companies. Generating <strong>$1K+ monthly revenue</strong> from US clients with established professional network and market penetration.</p>
+                </div>
+                
+                <div class="presence-card">
+                    <h3>
+                        <div class="presence-flag" style="background: var(--primary-orange);">DE</div>
+                        Germany
+                    </h3>
+                    <span class="status active">Strategic Partnership</span>
+                    <p><strong>PICPOINT GmbH</strong> partnership provides <strong>15+ years experience</strong> in German marketplaces and e-commerce photography. Proven track record with major German retailers and established marketplace integrations.</p>
+                </div>
+
+                <div class="presence-card">
+                    <h3>
+                        <div class="presence-flag" style="background: var(--primary-blue);">GB</div>
+                        United Kingdom
+                    </h3>
+                    <span class="status active">Client Partnerships</span>
+                    <p><strong>Etouchcreate</strong> partnership with Managing Director endorsement. Established relationships with UK jewelry and e-commerce photography market. Premium pricing market with <strong>£10-30 per product photo</strong> standards.</p>
+                </div>
+                
+                <div class="presence-card">
+                    <h3>
+                        <div class="presence-flag" style="background: var(--primary-green);">CN</div>
+                        China
+                    </h3>
+                    <span class="status planned">Community Engagement</span>
+                    <p>Active preliminary engagement with <strong>local AI research institutions</strong> and photography communities. Largest manufacturing and e-commerce market globally. Partnership discussions with major Chinese photography studios underway.</p>
+                </div>
+
+                <div class="presence-card">
+                    <h3>
+                        <div class="presence-flag" style="background: var(--primary-yellow);">SG</div>
+                        Asia-Pacific
+                    </h3>
+                    <span class="status planned">Strategic Analysis</span>
+                    <p>Singapore hub strategy for <strong>APAC market expansion</strong>. Access to Southeast Asian e-commerce boom and regional photography services. Gateway to Australia, Japan, and emerging Asian markets with <strong>8.1% CAGR growth rates</strong>.</p>
+                </div>
+                
+                <div class="presence-card">
+                    <h3>
+                        <div class="presence-flag" style="background: var(--primary-blue);">AE</div>
+                        UAE
+                    </h3>
+                    <span class="status planned">Advanced Negotiations</span>
+                    <p><strong>LOI signed</strong> with renowned Middle Eastern photographer with <strong>20+ years regional experience</strong>. Gateway to Middle East and African markets with established professional networks and regional expertise.</p>
+                </div>
+                
+                <div class="presence-card">
+                    <h3>
+                        <div class="presence-flag" style="background: var(--primary-yellow);">IN</div>
+                        India
+                    </h3>
+                    <span class="status planned">Market Analysis</span>
+                    <p>Comprehensive analysis of <strong>$6.8B photography services market</strong>. Major outsourcing destination for global retouching services. Technical partnerships identified with leading Indian digital agencies and studios.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Testimonials -->
+    <section class="section section-blue">
+        <div class="container">
+            <h2 class="section-title white">Client Success Stories</h2>
+            <p class="section-subtitle white">Proven results from enterprises and professionals across multiple industries</p>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "I am writing to wholeheartedly endorse Anastasiya Butova and her company ois.gold. The skillset required for this work is very specialised. There is a real shortage of people that can attain these sort of levels. The major advantage I foresee with ois.gold is the greatly increased quality her solution offers along with the sheer savings in time."
+                    </div>
+                    <div class="testimonial-author">Paul Miller</div>
+                    <div class="testimonial-company">Managing Director, Etouchcreate, UK</div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "The result exceeded my expectations - perfect pieces according to all canons of jewellery retouching, even despite the low quality of the original images. This is a wonderful tool that frees you from monotonous manual labour and frees up a lot of time for more important things."
+                    </div>
+                    <div class="testimonial-author">Professional Retoucher</div>
+                    <div class="testimonial-company">Enterprise Client</div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "I have already automated all my work, I process pictures and catalogues. Everything has become much faster, accelerated the work 2 times. The metal becomes pretty, glare and reflexes are smoothed out, I almost never need to correct it."
+                    </div>
+                    <div class="testimonial-author">Anastasia</div>
+                    <div class="testimonial-company">Course Graduate</div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "Thanks to the course, the quality of work and the speed of its completion have increased significantly. Our employee took Anastasia Butova's course 'Retouching in Neural Networks' and the results have been excellent."
+                    </div>
+                    <div class="testimonial-author">Natalia Mikhailovna Sorokina</div>
+                    <div class="testimonial-company">SK Sorokin Jewelry Production</div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "Now, thanks to the course, I am able to quickly process the image and present the true quality of my work to the customer. After taking the course, I continue to follow Anastasia's work and additional materials."
+                    </div>
+                    <div class="testimonial-author">Yulia Pavlovna Petoeva</div>
+                    <div class="testimonial-company">Individual Entrepreneur, Jewelry Production</div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "I declare with responsibility that the speed of my work has significantly improved and its quality has slightly increased too. Special gratitude to Anastasia for her constant support and feedback during and after completion of the course."
+                    </div>
+                    <div class="testimonial-author">Tatiana Korneva</div>
+                    <div class="testimonial-company">Professional Jewelry & Object Retoucher</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Financial Projections -->
+    <section class="section section-white">
+        <div class="container">
+            <h2 class="section-title">Business Model & Growth Metrics</h2>
+            <p class="section-subtitle">Proven revenue streams with scalable economics and multiple growth vectors</p>
+            
+            <div class="revenue-model">
+                <div class="revenue-card">
+                    <div class="revenue-amount">$8,000</div>
+                    <div class="revenue-period">First Enterprise Sale</div>
+                    <div class="revenue-details">Major jewelry company (diamant-online.ru) purchased custom system. Proof of concept with immediate ROI demonstration. Client expanded to monthly processing with 100% retention rate.</div>
+                </div>
+
+                <div class="revenue-card">
+                    <div class="revenue-amount">1,000+</div>
+                    <div class="revenue-period">Files Monthly</div>
+                    <div class="revenue-details">Consistent monthly processing volume across recurring clients. Steady revenue growth with 100% client retention rate. 25% month-over-month volume increase trend.</div>
+                </div>
+
+                <div class="revenue-card">
+                    <div class="revenue-amount">$1.00</div>
+                    <div class="revenue-period">Starting Price/Image</div>
+                    <div class="revenue-details">Jewelry retouching starting price. Current cost: $0.05, target: $0.02. 95%+ profit margins at scale with premium professional quality delivery.</div>
+                </div>
+
+                <div class="revenue-card">
+                    <div class="revenue-amount">$5</div>
+                    <div class="revenue-period">Monthly Subscription</div>
+                    <div class="revenue-details">SaaS model for comprehensive plugin suite. 95% cheaper than Retouch4me while providing superior functionality. Conservative projections: $30K-$150K annual revenue from competitor user base.</div>
+                </div>
+
+                <div class="revenue-card">
+                    <div class="revenue-amount">3</div>
+                    <div class="revenue-period">Revenue Streams</div>
+                    <div class="revenue-details">Pay-per-image processing, SaaS subscriptions, and enterprise licensing. Diversified model reduces risk while maximizing growth potential across market segments.</div>
+                </div>
+
+                <div class="revenue-card">
+                    <div class="revenue-amount">95%</div>
+                    <div class="revenue-period">Gross Margins</div>
+                    <div class="revenue-details">Scalable economics with minimal marginal costs. 50x cost advantage over manual processing. Volume scaling reduces unit costs while maintaining premium pricing.</div>
+                </div>
+            </div>
+
+            <div class="data-sources">
+                <h3 style="color: var(--dark-blue); margin-bottom: 30px; text-align: center;">Two-Product Strategy</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 40px;">
+                    <div style="text-align: center; padding: 30px; background: var(--light-gray); border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); border: 1px solid #e9ecef;">
+                        <h4 style="color: var(--primary-orange); margin-bottom: 20px; font-size: 1.5rem;">OIS.Gold</h4>
+                        <p style="margin-bottom: 20px;"><strong>Jewelry Industry Focus</strong></p>
+                        <ul style="text-align: left; color: var(--medium-gray); line-height: 1.8;">
+                            <li>• Automated jewelry retouching (first-to-market)</li>
+                            <li>• Digital model generation for jewelry visualization</li>
+                            <li>• Neural network animation for product videos</li>
+                            <li>• Complete jewelry e-commerce workflow</li>
+                            <li>• Industry-specific quality standards</li>
+                        </ul>
+                    </div>
+                    <div style="text-align: center; padding: 30px; background: var(--light-gray); border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); border: 1px solid #e9ecef;">
+                        <h4 style="color: var(--primary-blue); margin-bottom: 20px; font-size: 1.5rem;">HappyIn.AI</h4>
+                        <p style="margin-bottom: 20px;"><strong>Professional Retouching Suite</strong></p>
+                        <ul style="text-align: left; color: var(--medium-gray); line-height: 1.8;">
+                            <li>• Photoshop generative fill replacement</li>
+                            <li>• Clothing and textile retouching</li>
+                            <li>• Invisible mannequin creation</li>
+                            <li>• Automotive and interior photography</li>
+                            <li>• Cross-industry professional tools</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="section section-white">
+        <div class="container">
+            <h2 class="section-title">Our World-Class Team</h2>
+            <p class="section-subtitle">35 specialists across 5 countries with deep industry expertise and proven track records</p>
+            
+            <div class="team-stats">
+                <div class="team-stat">
+                    <h3>60+</h3>
+                    <p>Years Combined Retouching Experience</p>
+                </div>
+                <div class="team-stat">
+                    <h3>12</h3>
+                    <p>Languages Spoken</p>
+                </div>
+                <div class="team-stat">
+                    <h3>2</h3>
+                    <p>PhD Holders</p>
+                </div>
+                <div class="team-stat">
+                    <h3>3</h3>
+                    <p>Years Experience at Future Competitors</p>
+                </div>
+                <div class="team-stat">
+                    <h3>35</h3>
+                    <p>Team Members Global</p>
+                </div>
+            </div>
+            
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="member-photo">
+                        <img src="images/team/anastasia_butova.jpg" alt="Anastasia Butova">
+                    </div>
+                    <div class="member-name">Anastasia Butova</div>
+                    <div class="member-role">Founder & CEO</div>
+                    <div class="member-description">15+ years jewelry retouching experience. Created first AI jewelry retouching model. Responsible for strategy, business development, and long-term vision. Led company from concept to $8K first sale.</div>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-photo">
+                        <img src="images/team/sergey_afonchenko.jpg" alt="Sergey Afonchenko">
+                    </div>
+                    <div class="member-name">Sergey Afonchenko</div>
+                    <div class="member-role">CTO</div>
+                    <div class="member-description">Expert in high-load systems and scalable architecture. Leading technical development and team growth. Ensures enterprise-grade solutions for global client base. Former experience at major tech companies.</div>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-photo">
+                        <img src="images/team/ksenia_zhivaeva.jpg" alt="Ksenia Zhivaeva">
+                    </div>
+                    <div class="member-name">Ksenia Zhivaeva</div>
+                    <div class="member-role">Head of Client Relations</div>
+                    <div class="member-description">Client relations expert managing partnerships and business development. Oversees Russian market expansion and international client satisfaction. Responsible for strategic partnerships and revenue growth.</div>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-photo">
+                        <img src="images/team/galina_khurshudyan.jpg" alt="Galina Khurshudyan">
+                    </div>
+                    <div class="member-name">Galina Khurshudyan</div>
+                    <div class="member-role">Lead Technology Testing</div>
+                    <div class="member-description">Comprehensive evaluation and integration of neural network models. Systematic testing of generative AI technologies, error identification, and workflow optimization methodology development.</div>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-photo">
+                        <img src="images/team/anastasia_ilyukhina.jpg" alt="Anastasia Ilyukhina">
+                    </div>
+                    <div class="member-name">Anastasia Ilyukhina</div>
+                    <div class="member-role">AI Specialist</div>
+                    <div class="member-description">Dataset optimization and neural network training expert. Selection and analysis of optimal model settings. Data science team management and model performance analysis. Model merge specialist.</div>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-photo">
+                        <img src="images/team/vasilina_sergeeva.jpg" alt="Vasilina Sergeeva">
+                    </div>
+                    <div class="member-name">Vasilina Sergeeva</div>
+                    <div class="member-role">AI Researcher (PhD)</div>
+                    <div class="member-description">PhD in Molecular Genetics with machine learning expertise in biomedicine. Polyglot researcher (8 languages) bringing scientific rigor to AI development. Academic-level research approach to technical innovation.</div>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-photo">
+                        <img src="images/team/tatiana_rogozina.jpg" alt="Tatiana Rogozina">
+                    </div>
+                    <div class="member-name">Tatiana Rogozina</div>
+                    <div class="member-role">Senior Backend Developer</div>
+                    <div class="member-description">16+ years IT experience. Java/Kotlin expert with microservices architecture expertise. Enterprise-level backend development for high-load systems. Former fintech and government platform experience.</div>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-photo">
+                        <img src="images/team/tatiana_android.jpg" alt="Tatiana Android Developer">
+                    </div>
+                    <div class="member-name">Tatiana [Android]</div>
+                    <div class="member-role">Android & Backend Developer</div>
+                    <div class="member-description">15+ years software development experience. Android specialist with mathematical background. Backend development expertise. Focus on mobile solutions and cross-platform development.</div>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-photo">
+                        <img src="images/team/andrei_anufrienko.jpg" alt="Andrei Anufrienko">
+                    </div>
+                    <div class="member-name">Andrei Anufrienko</div>
+                    <div class="member-role">Lead UI/UX Designer</div>
+                    <div class="member-description">Expert in complex design solutions and user experience strategy. Creates high-quality interface prototypes and design systems. Ensures visual integrity throughout all development phases.</div>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-photo">
+                        <img src="images/team/vera_volodina.jpg" alt="Vera Volodina">
+                    </div>
+                    <div class="member-name">Vera Volodina</div>
+                    <div class="member-role">Visual Communications Designer</div>
+                    <div class="member-description">Brand identity expert creating cohesive visual communications. Manages corporate design consistency across all platforms. Develops marketing materials and presentation design.</div>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-photo">
+                        <img src="images/team/anna_shumskaia.jpg" alt="Anna Shumskaia">
+                    </div>
+                    <div class="member-name">Anna Shumskaia</div>
+                    <div class="member-role">Graphic Designer</div>
+                    <div class="member-description">Multidisciplinary designer with architecture background. Specializes in graphic design, illustration, and animation. Expert in visual storytelling and interdisciplinary design approaches.</div>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-photo">
+                        <img src="images/team/tatyana_fyforieva.jpg" alt="Tatyana Fyforieva">
+                    </div>
+                    <div class="member-name">Tatyana Fyforieva</div>
+                    <div class="member-role">Marketing Director</div>
+                    <div class="member-description">10+ years digital marketing experience across high-growth industries. Expert in media buying, paid social, and CPA strategies. Former experience managing million-dollar budgets at major companies.</div>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-photo">
+                        <img src="images/team/anna_podkolzina.jpg" alt="Anna Podkolzina">
+                    </div>
+                    <div class="member-name">Anna Podkolzina</div>
+                    <div class="member-role">Media Buying Expert</div>
+                    <div class="member-description">16+ years marketing experience with 6 years mobile marketing specialization. Former Yandex employee with ASO expertise. Advanced media buying and app promotion specialist.</div>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-photo">
+                        <img src="images/team/alina_meollman.jpg" alt="Alina Meollman">
+                    </div>
+                    <div class="member-name">Alina Meollman</div>
+                    <div class="member-role">German Market Partner</div>
+                    <div class="member-description">Founder of PICPOINT GmbH with 15+ years experience in German e-commerce photography. Established relationships with major German marketplaces and retailers. Strategic European market entry.</div>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-photo">
+                        <img src="images/team/team_member_15.jpg" alt="Team Member 15">
+                    </div>
+                    <div class="member-name">Team Member 15</div>
+                    <div class="member-role">Specialist Position</div>
+                    <div class="member-description">Additional team member contributing specialized expertise to our growing organization. Part of our 35-person global team across five countries.</div>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-photo">
+                        <img src="images/team/team_member_16.jpg" alt="Team Member 16">
+                    </div>
+                    <div class="member-name">Team Member 16</div>
+                    <div class="member-role">Specialist Position</div>
+                    <div class="member-description">Additional team member contributing specialized expertise to our growing organization. Part of our 35-person global team across five countries.</div>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-photo">
+                        <img src="images/team/team_member_17.jpg" alt="Team Member 17">
+                    </div>
+                    <div class="member-name">Team Member 17</div>
+                    <div class="member-role">Specialist Position</div>
+                    <div class="member-description">Additional team member contributing specialized expertise to our growing organization. Part of our 35-person global team across five countries.</div>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-photo">
+                        <img src="images/team/team_member_18.jpg" alt="Team Member 18">
+                    </div>
+                    <div class="member-name">Team Member 18</div>
+                    <div class="member-role">Specialist Position</div>
+                    <div class="member-description">Additional team member contributing specialized expertise to our growing organization. Part of our 35-person global team across five countries.</div>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-photo">
+                        <img src="images/team/team_member_19.jpg" alt="Team Member 19">
+                    </div>
+                    <div class="member-name">Team Member 19</div>
+                    <div class="member-role">Specialist Position</div>
+                    <div class="member-description">Additional team member contributing specialized expertise to our growing organization. Part of our 35-person global team across five countries.</div>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-photo">
+                        <img src="images/team/team_member_20.jpg" alt="Team Member 20">
+                    </div>
+                    <div class="member-name">Team Member 20</div>
+                    <div class="member-role">Specialist Position</div>
+                    <div class="member-description">Additional team member contributing specialized expertise to our growing organization. Part of our 35-person global team across five countries.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Join the AI Retouching Revolution</h2>
+                <p style="font-size: 1.4rem; margin-bottom: 20px;">$50.2B market • First-to-market advantage • 95% margins • Global expansion ready</p>
+                <p style="font-size: 1.2rem; opacity: 0.9;">60+ years of professional expertise meets cutting-edge AI technology. Proven revenue, established partnerships, and 3-year competitive moat in specialized markets that giants can't serve.</p>
+                <a href="#" class="cta-button">Schedule Investment Discussion</a>
+                <div style="margin-top: 40px; opacity: 0.8;">
+                    <p>HappyIn.Team • Buenos Aires, Argentina • Global Operations</p>
+                    <p>35 specialists • 5 countries • 2 breakthrough products</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Add smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Animate elements on scroll
+        function animateOnScroll() {
+            const elements = document.querySelectorAll('.region-card, .size-card, .tech-card, .revenue-card, .team-member, .example-card, .testimonial-card, .timeline-content, .motivation-card, .why-card, .market-card, .competition-card, .presence-card, .demo-card');
+            
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < window.innerHeight - elementVisible) {
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0)';
+                }
+            });
+        }
+
+        // Initialize animation
+        document.addEventListener('DOMContentLoaded', function() {
+            const elements = document.querySelectorAll('.region-card, .size-card, .tech-card, .revenue-card, .team-member, .example-card, .testimonial-card, .timeline-content, .motivation-card, .why-card, .market-card, .competition-card, .presence-card, .demo-card');
+            elements.forEach(element => {
+                element.style.opacity = '0';
+                element.style.transform = 'translateY(30px)';
+                element.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+            });
+            
+            animateOnScroll();
+        });
+
+        window.addEventListener('scroll', animateOnScroll);
+
+        // Add interactive hover effects for charts
+        document.querySelectorAll('.donut-segment').forEach(segment => {
+            segment.addEventListener('mouseenter', function() {
+                this.style.strokeWidth = '40';
+            });
+            
+            segment.addEventListener('mouseleave', function() {
+                this.style.strokeWidth = '35';
+            });
+        });
+
+        // Timeline intersection observer for enhanced animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe timeline items
+        document.querySelectorAll('.timeline-item').forEach(item => {
+            observer.observe(item);
+        });
+    </script>
+</body>
+</html>

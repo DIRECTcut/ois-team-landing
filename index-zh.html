@@ -1,0 +1,2524 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HappyIn.Team - AI修图革命 | 投资者演示</title>
+    <!-- 
+    IMAGE STRUCTURE:
+    
+    Folder: images/team/ (for team member photos)
+    - anastasia_butova.jpg
+    - sergey_afonchenko.jpg
+    - ksenia_zhivaeva.jpg
+    - galina_khurshudyan.jpg
+    - anastasia_ilyukhina.jpg
+    - vasilina_sergeeva.jpg
+    - tatiana_rogozina.jpg
+    - tatiana_android.jpg
+    - andrei_anufrienko.jpg
+    - vera_volodina.jpg
+    - anna_shumskaia.jpg
+    - tatyana_fyforieva.jpg
+    - anna_podkolzina.jpg
+    - alina_meollman.jpg
+    - team_member_15.jpg
+    - team_member_16.jpg
+    - team_member_17.jpg
+    - team_member_18.jpg
+    - team_member_19.jpg
+    - team_member_20.jpg
+    
+    Folder: images/site/ (for website content)
+    - jewelry_retouching_demo.mp4 (video)
+    - before_after_comparison.jpg
+    - live_processing_platform.jpg
+    - workflow_integration.jpg
+    - jewelry_before_after.jpg
+    - clothing_retouching.jpg
+    - yolo_detection.jpg
+    - segmentation_results.jpg
+    - color_correction.jpg
+    - high_resolution_processing.jpg
+    - interior_geometry.jpg
+    - automotive_retouching.jpg
+    - food_photography.jpg
+    - model_generation.jpg
+    - diffusion_models.jpg
+    - yolo_visualization.jpg
+    - color_checker_tech.jpg
+    - high_res_tech.jpg
+    -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Language Switcher */
+        .language-switcher {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 25px;
+            padding: 10px 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .language-switcher .current-lang {
+            color: var(--dark-blue);
+            font-weight: bold;
+            margin-right: 10px;
+            font-size: 0.9rem;
+        }
+
+        .language-switcher a {
+            color: var(--primary-orange);
+            text-decoration: none;
+            font-weight: 600;
+            padding: 5px 10px;
+            border-radius: 15px;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+        }
+
+        .language-switcher a:hover {
+            background: var(--primary-orange);
+            color: white;
+        }
+
+        body {
+            font-family: 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #2C3E50;
+            background: #f8f9fa;
+            word-spacing: normal;
+            letter-spacing: normal;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Color Palette - Updated with darker blues */
+        :root {
+            --primary-red: #E74C3C;
+            --primary-orange: #E67E22;
+            --primary-blue: #1B2947;
+            --primary-green: #2ECC71;
+            --primary-yellow: #F39C12;
+            --primary-teal: #1ABC9C;
+            --dark-blue: #0F1419;
+            --dark-gray-blue: #1A202C;
+            --light-gray: #f8f9fa;
+            --medium-gray: #5D6D7E;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: var(--dark-blue);
+            color: white;
+            padding: 120px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 4.5rem;
+            margin-bottom: 30px;
+            font-weight: 700;
+            background: linear-gradient(45deg, var(--primary-orange), var(--primary-yellow), var(--primary-teal));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-subtitle {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            opacity: 0.95;
+            color: var(--primary-orange);
+        }
+
+        .hero-tagline {
+            font-size: 1.4rem;
+            margin-bottom: 50px;
+            opacity: 0.85;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.8;
+        }
+
+        .motivation-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .motivation-card {
+            background: rgba(255,255,255,0.15);
+            border-radius: 20px;
+            padding: 30px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+            text-align: left;
+            transition: transform 0.3s ease;
+        }
+
+        .motivation-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .motivation-card h3 {
+            color: var(--primary-orange);
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            line-height: 1.3;
+        }
+
+        .motivation-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+            color: white;
+            flex-shrink: 0;
+        }
+
+        /* Section Styles */
+        .section {
+            padding: 80px 0;
+        }
+
+        .section-white {
+            background: white;
+        }
+
+        .section-blue {
+            background: linear-gradient(135deg, var(--dark-blue) 0%, var(--dark-gray-blue) 100%);
+            color: white;
+        }
+
+        .section-light {
+            background: var(--light-gray);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom: 30px;
+            color: var(--dark-blue);
+            position: relative;
+            font-weight: 700;
+        }
+
+        .section-title.white {
+            color: white;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.4rem;
+            margin-bottom: 60px;
+            color: var(--medium-gray);
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .section-subtitle.white {
+            color: rgba(255,255,255,0.9);
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 5px;
+            background: linear-gradient(90deg, var(--primary-orange), var(--primary-yellow));
+            border-radius: 3px;
+        }
+
+        /* Timeline */
+        .timeline-container {
+            position: relative;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .timeline-line {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: linear-gradient(180deg, var(--primary-blue), var(--primary-orange));
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin: 40px 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .timeline-item:nth-child(odd) {
+            justify-content: flex-start;
+        }
+
+        .timeline-item:nth-child(even) {
+            justify-content: flex-end;
+        }
+
+        .timeline-content {
+            background: white;
+            border-radius: 20px;
+            padding: 25px;
+            max-width: 45%;
+            position: relative;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+            border: 1px solid #e9ecef;
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content {
+            margin-right: auto;
+        }
+
+        .timeline-item:nth-child(even) .timeline-content {
+            margin-left: auto;
+        }
+
+        .timeline-date {
+            background: var(--primary-blue);
+            color: white;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 12px;
+        }
+
+        .timeline-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var(--dark-blue);
+            margin-bottom: 10px;
+        }
+
+        .timeline-description {
+            color: var(--medium-gray);
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: 50%;
+            top: 25px;
+            width: 16px;
+            height: 16px;
+            background: var(--primary-orange);
+            border-radius: 50%;
+            transform: translateX(-50%);
+            border: 3px solid white;
+            box-shadow: 0 0 8px rgba(0,0,0,0.2);
+        }
+
+        /* Why We Do This - Updated with better spacing */
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .why-card {
+            background: rgba(255,255,255,0.15);
+            border-radius: 20px;
+            padding: 40px;
+            border: 1px solid rgba(255,255,255,0.2);
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s ease;
+        }
+
+        .why-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .why-card h3 {
+            color: var(--primary-orange);
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            line-height: 1.2;
+        }
+
+        .why-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+            color: white;
+            flex-shrink: 0;
+        }
+
+        /* Market Analysis */
+        .market-analysis {
+            background: white;
+            border-radius: 25px;
+            padding: 50px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+            margin-bottom: 60px;
+            border: 1px solid #e9ecef;
+        }
+
+        .market-overview-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .market-card {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--dark-blue) 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .market-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .market-card:nth-child(2) {
+            background: linear-gradient(135deg, var(--primary-orange) 0%, var(--primary-red) 100%);
+        }
+
+        .market-card:nth-child(3) {
+            background: linear-gradient(135deg, var(--primary-green) 0%, var(--primary-teal) 100%);
+        }
+
+        .market-card:nth-child(4) {
+            background: linear-gradient(135deg, var(--primary-yellow) 0%, var(--primary-orange) 100%);
+        }
+
+        .market-card:nth-child(5) {
+            background: linear-gradient(135deg, var(--primary-red) 0%, var(--primary-orange) 100%);
+        }
+
+        .market-card:nth-child(6) {
+            background: linear-gradient(135deg, var(--primary-teal) 0%, var(--primary-green) 100%);
+        }
+
+        .market-card h3 {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .market-card p {
+            font-size: 1.2rem;
+            opacity: 0.95;
+        }
+
+        /* Regional Data */
+        .regional-analysis {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .region-card {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+            border: 1px solid #e9ecef;
+        }
+
+        .region-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .region-title {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--dark-blue);
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .region-flag {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: white;
+            flex-shrink: 0;
+        }
+
+        .chart-container {
+            width: 200px;
+            height: 200px;
+            margin: 30px auto;
+            position: relative;
+        }
+
+        .donut-chart {
+            width: 100%;
+            height: 100%;
+            transform: rotate(-90deg);
+        }
+
+        .donut-segment {
+            fill: none;
+            stroke-width: 35;
+            stroke-linecap: round;
+            transition: all 0.3s ease;
+        }
+
+        .segment-1 { stroke: var(--primary-red); }
+        .segment-2 { stroke: var(--primary-orange); }
+        .segment-3 { stroke: var(--primary-blue); }
+        .segment-4 { stroke: var(--primary-green); }
+        .segment-5 { stroke: var(--primary-yellow); }
+        .segment-6 { stroke: var(--primary-teal); }
+
+        .chart-label {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--dark-blue);
+        }
+
+        .region-stats {
+            margin-top: 30px;
+        }
+
+        .region-stats p {
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+            text-align: left;
+        }
+
+        .highlight {
+            color: var(--primary-orange);
+            font-weight: bold;
+        }
+
+        /* Competition Analysis */
+        .competition-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 50px;
+            margin-top: 60px;
+        }
+
+        .competition-card {
+            background: rgba(255,255,255,0.15);
+            border-radius: 20px;
+            padding: 40px;
+            border: 1px solid rgba(255,255,255,0.2);
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s ease;
+        }
+
+        .competition-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .competition-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            color: var(--primary-orange);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .competition-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.5rem;
+            color: white;
+            flex-shrink: 0;
+        }
+
+        .pricing-comparison {
+            background: white;
+            color: var(--dark-blue);
+            border-radius: 15px;
+            padding: 30px;
+            margin: 30px 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        /* Demo Section */
+        .demo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 50px;
+            margin-top: 60px;
+        }
+
+        .demo-card {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            border: 1px solid #e9ecef;
+            text-align: center;
+        }
+
+        .demo-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .demo-media {
+            width: 100%;
+            height: 350px;
+            background: var(--light-gray);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            color: var(--medium-gray);
+            border: 3px dashed var(--primary-blue);
+            margin-bottom: 30px;
+            transition: border-color 0.3s ease;
+            cursor: pointer;
+            overflow: hidden;
+        }
+
+        .demo-media img,
+        .demo-media video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 12px;
+        }
+
+        .demo-card:hover .demo-media {
+            border-color: var(--primary-orange);
+        }
+
+        .demo-title {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--dark-blue);
+            margin-bottom: 20px;
+        }
+
+        .demo-description {
+            color: var(--medium-gray);
+            line-height: 1.6;
+            font-size: 1.1rem;
+        }
+
+        /* Technology Stack */
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .tech-card {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            border: 1px solid #e9ecef;
+        }
+
+        .tech-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .tech-image {
+            width: 200px;
+            height: 200px;
+            background: var(--light-gray);
+            border-radius: 15px;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px dashed var(--primary-blue);
+            font-size: 1rem;
+            color: var(--medium-gray);
+            transition: border-color 0.3s ease;
+            overflow: hidden;
+        }
+
+        .tech-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 13px;
+        }
+
+        .tech-card:hover .tech-image {
+            border-color: var(--primary-orange);
+        }
+
+        .tech-card h3 {
+            color: var(--dark-blue);
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+        }
+
+        /* Team Section - Updated with square photos */
+        .team-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .team-stat {
+            text-align: center;
+            padding: 30px;
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-teal) 100%);
+            color: white;
+            border-radius: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .team-stat:nth-child(2) {
+            background: linear-gradient(135deg, var(--primary-orange) 0%, var(--primary-red) 100%);
+        }
+
+        .team-stat:nth-child(3) {
+            background: linear-gradient(135deg, var(--primary-green) 0%, var(--primary-teal) 100%);
+        }
+
+        .team-stat:nth-child(4) {
+            background: linear-gradient(135deg, var(--primary-yellow) 0%, var(--primary-orange) 100%);
+        }
+
+        .team-stat:nth-child(5) {
+            background: linear-gradient(135deg, var(--primary-red) 0%, var(--primary-orange) 100%);
+        }
+
+        .team-stat:hover {
+            transform: translateY(-5px);
+        }
+
+        .team-stat h3 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .team-member {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            transition: transform 0.3s ease;
+            border: 1px solid #e9ecef;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .team-member:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Updated member photo style - square instead of round */
+        .member-photo {
+            width: 120px;
+            height: 120px;
+            background: var(--light-gray);
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            color: var(--medium-gray);
+            overflow: hidden;
+        }
+
+        .member-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 12px;
+        }
+
+        .member-name {
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: var(--dark-blue);
+        }
+
+        .member-role {
+            font-size: 1rem;
+            color: var(--primary-orange);
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .member-description {
+            font-size: 0.9rem;
+            line-height: 1.6;
+            color: var(--medium-gray);
+        }
+
+        /* Work Examples */
+        .examples-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .example-card {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            border: 1px solid #e9ecef;
+        }
+
+        .example-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .example-image {
+            width: 100%;
+            height: 250px;
+            background: var(--light-gray);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            color: var(--medium-gray);
+            border: 2px dashed var(--primary-blue);
+            margin-bottom: 20px;
+            transition: border-color 0.3s ease;
+            overflow: hidden;
+        }
+
+        .example-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 13px;
+        }
+
+        .example-card:hover .example-image {
+            border-color: var(--primary-orange);
+        }
+
+        .example-title {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: var(--dark-blue);
+            margin-bottom: 15px;
+        }
+
+        .example-description {
+            color: var(--medium-gray);
+            line-height: 1.6;
+        }
+
+        /* Client Testimonials */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .testimonial-card {
+            background: rgba(255,255,255,0.15);
+            border-radius: 20px;
+            padding: 30px;
+            border: 1px solid rgba(255,255,255,0.2);
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s ease;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .testimonial-text {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            margin-bottom: 20px;
+            opacity: 0.95;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            font-size: 1.1rem;
+            color: var(--primary-orange);
+            font-weight: bold;
+        }
+
+        .testimonial-company {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            margin-top: 5px;
+        }
+
+        /* Financial Section */
+        .revenue-model {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .revenue-card {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--dark-blue) 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .revenue-card:nth-child(2) {
+            background: linear-gradient(135deg, var(--primary-orange) 0%, var(--primary-red) 100%);
+        }
+
+        .revenue-card:nth-child(3) {
+            background: linear-gradient(135deg, var(--primary-green) 0%, var(--primary-teal) 100%);
+        }
+
+        .revenue-card:nth-child(4) {
+            background: linear-gradient(135deg, var(--primary-yellow) 0%, var(--primary-orange) 100%);
+        }
+
+        .revenue-card:nth-child(5) {
+            background: linear-gradient(135deg, var(--primary-red) 0%, var(--primary-orange) 100%);
+        }
+
+        .revenue-card:nth-child(6) {
+            background: linear-gradient(135deg, var(--primary-teal) 0%, var(--primary-green) 100%);
+        }
+
+        .revenue-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .revenue-amount {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .revenue-period {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+
+        .revenue-details {
+            font-size: 1rem;
+            line-height: 1.6;
+            opacity: 0.95;
+        }
+
+        /* Global Presence */
+        .presence-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .presence-card {
+            background: rgba(255,255,255,0.15);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            border: 1px solid rgba(255,255,255,0.2);
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s ease;
+        }
+
+        .presence-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .presence-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: var(--primary-orange);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .presence-flag {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: white;
+            flex-shrink: 0;
+        }
+
+        .status {
+            display: inline-block;
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .status.active {
+            background: var(--primary-green);
+            color: white;
+        }
+
+        .status.planned {
+            background: var(--primary-orange);
+            color: white;
+        }
+
+        /* Market Size Charts */
+        .size-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .size-card {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+            text-align: center;
+            transition: transform 0.3s ease;
+            border: 1px solid #e9ecef;
+        }
+
+        .size-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .size-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--primary-blue);
+            margin-bottom: 15px;
+        }
+
+        .size-card:nth-child(2) .size-number {
+            color: var(--primary-orange);
+        }
+
+        .size-card:nth-child(3) .size-number {
+            color: var(--primary-green);
+        }
+
+        .size-card:nth-child(4) .size-number {
+            color: var(--primary-red);
+        }
+
+        .size-card:nth-child(5) .size-number {
+            color: var(--primary-teal);
+        }
+
+        .size-card:nth-child(6) .size-number {
+            color: var(--primary-yellow);
+        }
+
+        .size-label {
+            font-size: 1.2rem;
+            color: var(--medium-gray);
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .size-description {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: var(--dark-blue);
+        }
+
+        /* Call to Action - Updated without orange-blue gradient */
+        .cta {
+            background: linear-gradient(135deg, var(--dark-blue) 0%, var(--dark-gray-blue) 100%);
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .cta-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .cta h2 {
+            font-size: 3rem;
+            margin-bottom: 30px;
+            font-weight: 700;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(45deg, var(--primary-green), var(--primary-teal));
+            color: white;
+            padding: 20px 50px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.3rem;
+            transition: all 0.3s ease;
+            margin-top: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+        }
+
+        /* Data Sources */
+        .data-sources {
+            background: white;
+            border-radius: 25px;
+            padding: 50px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+            margin-top: 60px;
+            border: 1px solid #e9ecef;
+        }
+
+        /* Unified Legend Style */
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 12px;
+        }
+
+        .legend-color {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .legend-text {
+            font-size: 1.1rem;
+            color: var(--dark-blue);
+        }
+
+        .legend-text.white {
+            color: white;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 3rem;
+            }
+            
+            .section-title {
+                font-size: 2.2rem;
+            }
+            
+            .container {
+                padding: 0 15px;
+            }
+            
+            .timeline-content {
+                max-width: 90%;
+            }
+            
+            .timeline-line {
+                left: 30px;
+            }
+            
+            .timeline-dot {
+                left: 30px;
+            }
+            
+            .timeline-item {
+                justify-content: flex-start !important;
+            }
+
+            .motivation-grid,
+            .why-grid,
+            .market-overview-grid,
+            .regional-analysis,
+            .competition-grid,
+            .tech-grid,
+            .team-grid,
+            .examples-grid,
+            .testimonials-grid,
+            .revenue-model,
+            .presence-grid,
+            .size-grid,
+            .demo-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Language Switcher -->
+    <div class="language-switcher">
+        <span class="current-lang">中文</span>
+        <a href="index.html">EN</a>
+    </div>
+
+    <!-- Hero Section with Motivation -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>HappyIn.Team</h1>
+                <p class="hero-subtitle">重建·修图·革新</p>
+                <p class="hero-tagline">我们从专业修图师的挫折感开始，对低效工具感到沮丧。现在我们正在用理解材质而非仅仅像素的AI技术，革命全球502亿美元的摄影市场。</p>
+                
+                <div class="motivation-grid">
+                    <div class="motivation-card">
+                        <h3>
+                            <div class="motivation-icon" style="background: var(--primary-red);">1</div>
+                            我们的使命
+                        </h3>
+                        <p>为修图师和企业提供我们一直希望存在的工具——理解行业需求的专业级AI，而非大众市场的妥协产品。</p>
+                    </div>
+                    <div class="motivation-card">
+                        <h3>
+                            <div class="motivation-icon" style="background: var(--primary-orange);">2</div>
+                            我们的方法
+                        </h3>
+                        <p>我们在拥有深度专业知识的细分领域构建专业解决方案。60多年的综合修图经验指导着我们创建的每一个算法。</p>
+                    </div>
+                    <div class="motivation-card">
+                        <h3>
+                            <div class="motivation-icon" style="background: var(--primary-blue);">3</div>
+                            我们的愿景
+                        </h3>
+                        <p>两个聚焦产品：面向珠宝行业的ois.gold和面向专业修图工作流的happyin.ai。质量胜过数量，专家胜过通才。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Company Journey Timeline -->
+    <section class="section section-white">
+        <div class="container">
+            <h2 class="section-title">我们的征程：从挫折到创新</h2>
+            <p class="section-subtitle">15+年专业修图经验如何引领我们创造行业变革的AI解决方案</p>
+            
+            <div class="timeline-container">
+                <div class="timeline-line"></div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2022年</div>
+                        <div class="timeline-title">开始：Happy_in_Happy</div>
+                        <div class="timeline-description">
+                            Anastasia Butova因15+年重复性珠宝修图工作的挫折感，开始基于Stable Diffusion开发神经网络课程。项目始于教育，但迅速发展为产品开发。
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2023年初</div>
+                        <div class="timeline-title">首个珠宝AI模型</div>
+                        <div class="timeline-description">
+                            创建了世界上第一个自动化珠宝修图模型，将工作效率提升10倍（从1小时缩短到6分钟每件）。这一突破证明了专业AI可以转换专业工作流程。
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2023年中</div>
+                        <div class="timeline-title">首次重大销售：8000美元</div>
+                        <div class="timeline-description">
+                            向主要珠宝公司(diamant-online.ru)销售定制珠宝修图系统。这验证了市场需求，为进一步发展提供资金，同时证明企业级质量。
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2023年末</div>
+                        <div class="timeline-title">产品线扩展</div>
+                        <div class="timeline-description">
+                            扩展到珠宝之外：服装修图、金属物体、AI模型生成。训练了20+扩散模型、100+ LoRAs和GANs。成为将生成式AI集成到专业工作流程的专家。
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2024年初</div>
+                        <div class="timeline-title">团队成长与技术领导</div>
+                        <div class="timeline-description">
+                            Sergey Afonchenko加入担任CTO。团队扩展到包括来自主要竞争对手的专家。申请智利创业加速器（在前900名中入选，进入最终面试）。
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2024年中</div>
+                        <div class="timeline-title">客户基础与收入增长</div>
+                        <div class="timeline-description">
+                            建立经常性收入流：每月处理1000+文件，客户遍布英国、德国和俄罗斯。开发完整珠宝工作流程：目录、创意照片、真实模型、视频生成。
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2024年末</div>
+                        <div class="timeline-title">全球扩张战略</div>
+                        <div class="timeline-description">
+                            启动国际扩张：纽约经理运营，德国办公室合作伙伴(PICPOINT GmbH)，中国社区参与启动，阿联酋摄影师谈判推进。双品牌战略：ois.gold + happyin.ai。
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2025年</div>
+                        <div class="timeline-title">市场颠覆准备就绪</div>
+                        <div class="timeline-description">
+                            跨5个国家的35人团队，专有技术栈，专利申请已提交。准备颠覆502亿美元市场，Adobe信贷限制为专业解决方案创造巨大机会。
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI System Demonstration -->
+    <section class="section section-light">
+        <div class="container">
+            <h2 class="section-title">AI系统实时演示</h2>
+            <p class="section-subtitle">通过真实前后对比示例和实时处理演示，了解我们专有的修图技术实际应用</p>
+            
+            <div class="demo-grid">
+                <div class="demo-card">
+                    <div class="demo-media">
+                        <video controls>
+                            <source src="images/site/jewelry_retouching_demo.mp4" type="video/mp4">
+                            您的浏览器不支持视频标签。
+                        </video>
+                    </div>
+                    <div class="demo-title">珠宝修图AI实际应用</div>
+                    <div class="demo-description">
+                        观看我们专有AI在6分钟内将原始珠宝照片转换为专业电商图像。实时看到金属增强、宝石优化和反射管理的过程。
+                    </div>
+                </div>
+
+                <div class="demo-card">
+                    <div class="demo-media">
+                        <img src="images/site/before_after_comparison.jpg" alt="前后对比">
+                    </div>
+                    <div class="demo-title">前后对比</div>
+                    <div class="demo-description">
+                        交互式前后滑动器展示我们AI处理的50+示例，涵盖珠宝、服装、汽车和室内摄影。专业质量结果节省95%时间。
+                    </div>
+                </div>
+
+                <div class="demo-card">
+                    <div class="demo-media">
+                        <img src="images/site/live_processing_platform.jpg" alt="实时处理演示">
+                    </div>
+                    <div class="demo-title">实时处理平台</div>
+                    <div class="demo-description">
+                        上传您自己的图像，实时查看我们的AI处理过程。体验说服企业客户支付8000+美元购买我们系统的速度和质量。
+                    </div>
+                </div>
+
+                <div class="demo-card">
+                    <div class="demo-media">
+                        <img src="images/site/workflow_integration.jpg" alt="专业工作流集成">
+                    </div>
+                    <div class="demo-title">专业工作流集成</div>
+                    <div class="demo-description">
+                        了解我们的API如何集成到现有摄影工作流程中。从批量市场上传到个人专业修图——与当前工具无缝集成。
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Examples -->
+    <section class="section section-white">
+        <div class="container">
+            <h2 class="section-title">AI技术演示</h2>
+            <p class="section-subtitle">我们专有神经网络在不同行业实际应用的真实示例</p>
+            
+            <div class="examples-grid">
+                <div class="example-card">
+                    <div class="example-image">
+                        <img src="images/site/jewelry_before_after.jpg" alt="珠宝增强前后对比">
+                    </div>
+                    <div class="example-title">珠宝增强AI</div>
+                    <div class="example-description">
+                        自动化金属增强、宝石优化和反射管理。速度提升10倍：从60分钟手工工作缩短到6分钟总处理时间。
+                    </div>
+                </div>
+
+                <div class="example-card">
+                    <div class="example-image">
+                        <img src="images/site/clothing_retouching.jpg" alt="服装修图示例">
+                    </div>
+                    <div class="example-title">服装面料处理</div>
+                    <div class="example-description">
+                        面料平滑、皱纹移除和隐形模特创建。理解纺织品特性和专业时尚摄影要求。
+                    </div>
+                </div>
+
+                <div class="example-card">
+                    <div class="example-image">
+                        <img src="images/site/yolo_detection.jpg" alt="YOLO检测可视化">
+                    </div>
+                    <div class="example-title">计算机视觉管道</div>
+                    <div class="example-description">
+                        99.7%准确率的实时物体检测和材料分类。定制YOLO模型识别组件进行有针对性的处理工作流程。
+                    </div>
+                </div>
+
+                <div class="example-card">
+                    <div class="example-image">
+                        <img src="images/site/segmentation_results.jpg" alt="分割结果">
+                    </div>
+                    <div class="example-title">专业分割</div>
+                    <div class="example-description">
+                        像素级完美边缘检测和材料隔离。实现以前需要数小时手工工作的专业级遮罩质量。
+                    </div>
+                </div>
+
+                <div class="example-card">
+                    <div class="example-image">
+                        <img src="images/site/color_correction.jpg" alt="色彩校正示例">
+                    </div>
+                    <div class="example-title">虚拟色彩检查器</div>
+                    <div class="example-description">
+                        正在申请专利的技术嵌入虚拟参考点进行自动色彩校正。消除对物理色卡的需求。
+                    </div>
+                </div>
+
+                <div class="example-card">
+                    <div class="example-image">
+                        <img src="images/site/high_resolution_processing.jpg" alt="高分辨率处理">
+                    </div>
+                    <div class="example-title">专业级输出</div>
+                    <div class="example-description">
+                        每边可处理高达15000像素的能力。在提供处理速度改进的同时保持专业印刷质量。
+                    </div>
+                </div>
+
+                <div class="example-card">
+                    <div class="example-image">
+                        <img src="images/site/interior_geometry.jpg" alt="室内几何校正">
+                    </div>
+                    <div class="example-title">室内摄影AI</div>
+                    <div class="example-description">
+                        自动透视校正和几何对齐。与知名室内摄影师的合作伙伴关系确保专业级结果。
+                    </div>
+                </div>
+
+                <div class="example-card">
+                    <div class="example-image">
+                        <img src="images/site/automotive_retouching.jpg" alt="汽车修图">
+                    </div>
+                    <div class="example-title">汽车增强</div>
+                    <div class="example-description">
+                        在保持细节的同时进行表面平滑、反射管理和多光源堆栈处理，用于专业汽车摄影。
+                    </div>
+                </div>
+
+                <div class="example-card">
+                    <div class="example-image">
+                        <img src="images/site/food_photography.jpg" alt="美食摄影增强">
+                    </div>
+                    <div class="example-title">美食摄影AI</div>
+                    <div class="example-description">
+                        专门理解食物纹理、新鲜度指标和用于餐厅和食品行业营销的诱人色彩配置文件。
+                    </div>
+                </div>
+
+                <div class="example-card">
+                    <div class="example-image">
+                        <img src="images/site/model_generation.jpg" alt="AI模型生成">
+                    </div>
+                    <div class="example-title">AI模型生成</div>
+                    <div class="example-description">
+                        为珠宝和服装可视化创建真实数字模型。针对品牌特定要求和人口统计的定制训练。
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why We Do This -->
+    <section class="section section-blue">
+        <div class="container">
+            <h2 class="section-title white">为什么专业修图需要革命</h2>
+            <p class="section-subtitle white">15+年专业经验揭示了只有行业专家才能解决的差距</p>
+            
+            <div class="why-grid">
+                <div class="why-card">
+                    <h3>
+                        <div class="why-icon" style="background: var(--primary-red);">时间</div>
+                        时间瓶颈扼杀利润
+                    </h3>
+                    <p style="margin-bottom: 20px;">传统珠宝修图：每件60+分钟。我们的AI：总计4分钟。这不仅仅是效率——这是业务转型。专业修图师80%的时间花在AI可以更好处理的重复性任务上。</p>
+                    <p><strong>之前：</strong>每件珠宝1小时手工工作<br>
+                    <strong>之后：</strong>2分钟AI + 2分钟细化 = 节省95%时间</p>
+                </div>
+
+                <div class="why-card">
+                    <h3>
+                        <div class="why-icon" style="background: var(--primary-orange);">质量</div>
+                        通用工具忽视专业标准
+                    </h3>
+                    <p style="margin-bottom: 20px;">Midjourney最大输出1500像素。专业人士需要高达15000像素。Adobe新的信贷限制让专业人士沮丧。大众市场AI不理解材料特性、照明要求或行业标准。</p>
+                    <p><strong>差距：</strong>没有AI理解珠宝金属反射率与面料纹理或汽车涂料的区别。我们构建了第一个材料感知修图AI。</p>
+                </div>
+
+                <div class="why-card">
+                    <h3>
+                        <div class="why-icon" style="background: var(--primary-blue);">蓝海</div>
+                        蓝海细分市场的先发优势
+                    </h3>
+                    <p style="margin-bottom: 20px;">当其他人构建通用工具时，我们主宰被忽视的细分市场。珠宝自动化在我们创造之前并不存在。隐形模特、汽车详装、室内几何校正——零竞争的巨大市场。</p>
+                    <p><strong>策略：</strong>拥有狭窄、盈利的细分市场，大公司无法在专业化深度上竞争。</p>
+                </div>
+
+                <div class="why-card">
+                    <h3>
+                        <div class="why-icon" style="background: var(--primary-green);">规模</div>
+                        市场容量需要自动化
+                    </h3>
+                    <p style="margin-bottom: 20px;">eBay：23亿listings。亚马逊：6亿+产品。中国市场：数千万。手工修图无法规模化。当前解决方案对专业使用来说要么太贵要么质量太低。</p>
+                    <p><strong>机会：</strong>我们的API可以每天处理数百万图像，每图像1美元，利润率95%。</p>
+                </div>
+
+                <div class="why-card">
+                    <h3>
+                        <div class="why-icon" style="background: var(--primary-yellow);">成本</div>
+                        质量标准vs成本压力
+                    </h3>
+                    <p style="margin-bottom: 20px;">企业需要消费者价格的专业质量。手工修图15-50美元/小时 vs 我们AI的1美元/图像。但质量必须匹配或超越人工工作——只有通过行业特定训练才可能。</p>
+                    <p><strong>解决方案：</strong>我们60+年综合经验创建产生专业级结果的训练数据集。</p>
+                </div>
+
+                <div class="why-card">
+                    <h3>
+                        <div class="why-icon" style="background: var(--primary-teal);">全球</div>
+                        全球覆盖需要本地专业知识
+                    </h3>
+                    <p style="margin-bottom: 20px;">每个市场都有不同的标准、工作流程和合作伙伴关系。我们在5个国家的全球团队在保持技术一致性的同时提供本地专业知识。这使我们能够服务竞争对手无法有效接触的市场。</p>
+                    <p><strong>优势：</strong>布宜诺斯艾利斯总部、纽约运营、德国合作伙伴关系、中国扩张、阿联酋谈判——真正的全球覆盖。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Market Analysis -->
+    <section class="section section-white">
+        <div class="container">
+            <h2 class="section-title">全球市场机会</h2>
+            <p class="section-subtitle">跨多个垂直领域具有已验证需求和未开发潜力的巨大可寻址市场</p>
+            
+            <div class="market-analysis">
+                <h3 style="text-align: center; margin-bottom: 40px; color: var(--dark-blue); font-size: 2rem;">按细分市场划分的市场规模</h3>
+                <div class="market-overview-grid">
+                    <div class="market-card">
+                        <h3>$502亿</h3>
+                        <p>全球数字摄影市场 (2024)</p>
+                    </div>
+                    <div class="market-card">
+                        <h3>$8.86亿</h3>
+                        <p>照片编辑软件市场 (2032)</p>
+                    </div>
+                    <div class="market-card">
+                        <h3>$3.42亿</h3>
+                        <p>电商摄影市场 (2031)</p>
+                    </div>
+                    <div class="market-card">
+                        <h3>11.1%</h3>
+                        <p>年增长率 (CAGR)</p>
+                    </div>
+                    <div class="market-card">
+                        <h3>23亿</h3>
+                        <p>eBay需要照片的活跃listings</p>
+                    </div>
+                    <div class="market-card">
+                        <h3>$600亿+</h3>
+                        <p>全球时尚行业摄影</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Regional Market Analysis -->
+            <h3 style="text-align: center; margin: 60px 0 40px; color: var(--dark-blue); font-size: 2.2rem;">全球市场分布</h3>
+            
+            <!-- Unified Regional Chart -->
+            <div style="display: flex; justify-content: center; align-items: center; margin: 60px 0; flex-wrap: wrap; gap: 60px;">
+                <div style="width: 400px; height: 400px; position: relative;">
+                    <svg class="donut-chart" viewBox="0 0 200 200" style="width: 100%; height: 100%;">
+                        <!-- North America: 40% -->
+                        <circle cx="100" cy="100" r="75" class="donut-segment segment-1" stroke-dasharray="188, 283" stroke-dashoffset="0"></circle>
+                        <!-- Europe: 30% -->
+                        <circle cx="100" cy="100" r="75" class="donut-segment segment-2" stroke-dasharray="141, 330" stroke-dashoffset="-188"></circle>
+                        <!-- Asia-Pacific: 15% -->
+                        <circle cx="100" cy="100" r="75" class="donut-segment segment-3" stroke-dasharray="71, 400" stroke-dashoffset="-329"></circle>
+                        <!-- China (separate): 16% -->
+                        <circle cx="100" cy="100" r="75" class="donut-segment segment-4" stroke-dasharray="75, 396" stroke-dashoffset="-400"></circle>
+                        <!-- India: 8% -->
+                        <circle cx="100" cy="100" r="75" class="donut-segment segment-5" stroke-dasharray="38, 433" stroke-dashoffset="-475"></circle>
+                        <!-- LATAM: 5% -->
+                        <circle cx="100" cy="100" r="75" class="donut-segment segment-6" stroke-dasharray="24, 447" stroke-dashoffset="-513"></circle>
+                    </svg>
+                    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center;">
+                        <div style="font-size: 2.5rem; font-weight: bold; color: var(--dark-blue);">$502亿</div>
+                        <div style="font-size: 1.2rem; color: var(--medium-gray);">总市场</div>
+                    </div>
+                </div>
+                
+                <!-- Legend -->
+                <div>
+                    <div style="display: flex; flex-direction: column; gap: 15px;">
+                        <div class="legend-item">
+                            <div class="legend-color" style="background: var(--primary-red);"></div>
+                            <span class="legend-text"><strong>北美</strong> - 40% ($201亿)</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color" style="background: var(--primary-orange);"></div>
+                            <span class="legend-text"><strong>欧洲</strong> - 30% ($151亿)</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color" style="background: var(--primary-blue);"></div>
+                            <span class="legend-text"><strong>亚太地区</strong> - 15% ($75亿)</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color" style="background: var(--primary-green);"></div>
+                            <span class="legend-text"><strong>中国</strong> - 16% ($82亿)</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color" style="background: var(--primary-yellow);"></div>
+                            <span class="legend-text"><strong>印度</strong> - 8% ($40亿)</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color" style="background: var(--primary-teal);"></div>
+                            <span class="legend-text"><strong>拉丁美洲</strong> - 5% ($25亿)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Regional Analysis Grid -->
+            <div class="regional-analysis">
+                <div class="region-card">
+                    <h3 class="region-title">
+                        <div class="region-flag" style="background: var(--primary-red);">美</div>
+                        北美
+                    </h3>
+                    <div class="region-stats">
+                        <p><span class="highlight">$201亿</span> 市场规模，2.4% CAGR</p>
+                        <p><span class="highlight">100万+</span> 每年处理的珠宝图像</p>
+                        <p><span class="highlight">11.5万</span> 专业摄影师 (BLS 2022)</p>
+                        <p><span class="highlight">1.34亿</span> eBay买家，37.8%亚马逊电商份额</p>
+                        <p><span class="highlight">纽约经理：</span> 8个月业绩记录，每月$1K+收入</p>
+                        <p><span class="highlight">已验证收入：</span> $8K首次企业销售</p>
+                    </div>
+                </div>
+
+                <div class="region-card">
+                    <h3 class="region-title">
+                        <div class="region-flag" style="background: var(--primary-orange);">欧</div>
+                        欧洲
+                    </h3>
+                    <div class="region-stats">
+                        <p><span class="highlight">$151亿</span> 跨27个国家的市场规模</p>
+                        <p><span class="highlight">50万+</span> 每年处理的珠宝图像</p>
+                        <p><span class="highlight">5万</span> 专业摄影师 (FEP)</p>
+                        <p><span class="highlight">PICPOINT GmbH：</span> 15+年德国市场经验</p>
+                        <p><span class="highlight">市场专业知识：</span> 成熟的电商集成</p>
+                        <p><span class="highlight">优质定价：</span> 英国每张产品照片£10-30</p>
+                    </div>
+                </div>
+
+                <div class="region-card">
+                    <h3 class="region-title">
+                        <div class="region-flag" style="background: var(--primary-green);">中</div>
+                        中国
+                    </h3>
+                    <div class="region-stats">
+                        <p><span class="highlight">$82亿</span> 独立市场（最大单一国家）</p>
+                        <p><span class="highlight">500万+</span> 每年处理的珠宝图像</p>
+                        <p><span class="highlight">数千万</span> 电商照片 (淘宝、京东、天猫)</p>
+                        <p><span class="highlight">制造中心：</span> 全球出口摄影需求</p>
+                        <p><span class="highlight">社区参与：</span> 与AI机构积极讨论</p>
+                        <p><span class="highlight">增长率：</span> 区域内6.2% CAGR最快</p>
+                    </div>
+                </div>
+
+                <div class="region-card">
+                    <h3 class="region-title">
+                        <div class="region-flag" style="background: var(--primary-yellow);">印</div>
+                        印度+亚洲
+                    </h3>
+                    <div class="region-stats">
+                        <p><span class="highlight">$115亿</span> 综合市场规模</p>
+                        <p><span class="highlight">300万+</span> 每年珠宝图像</p>
+                        <p><span class="highlight">$68亿</span> 印度摄影服务市场</p>
+                        <p><span class="highlight">8.1% CAGR</span> 增长最快的摄影市场</p>
+                        <p><span class="highlight">74.8%</span> 智能手机普及率推动移动摄影</p>
+                        <p><span class="highlight">外包中心：</span> 全球修图服务目的地</p>
+                    </div>
+                </div>
+
+                <div class="region-card">
+                    <h3 class="region-title">
+                        <div class="region-flag" style="background: var(--primary-teal);">拉</div>
+                        拉丁美洲
+                    </h3>
+                    <div class="region-stats">
+                        <p><span class="highlight">$25亿</span> 具有总部优势的市场规模</p>
+                        <p><span class="highlight">30万+</span> 每年处理的珠宝图像</p>
+                        <p><span class="highlight">3-5万</span> 专业摄影师</p>
+                        <p><span class="highlight">巴西：</span> $11亿（42%区域市场）</p>
+                        <p><span class="highlight">布宜诺斯艾利斯总部：</span> 战略成本和人才优势</p>
+                        <p><span class="highlight">电商增长：</span> 快速数字化转型</p>
+                    </div>
+                </div>
+
+                <div class="region-card">
+                    <h3 class="region-title">
+                        <div class="region-flag" style="background: var(--primary-blue);">阿</div>
+                        阿联酋+中东
+                    </h3>
+                    <div class="region-stats">
+                        <p><span class="highlight">$35亿</span> 估计摄影市场</p>
+                        <p><span class="highlight">门户市场</span> 通往非洲和中东</p>
+                        <p><span class="highlight">LOI已签署</span> 区域代表协议</p>
+                        <p><span class="highlight">高级谈判</span> 与知名区域摄影师</p>
+                        <p><span class="highlight">20+年</span> 本地合作伙伴经验</p>
+                        <p><span class="highlight">战略扩张：</span> 进入新兴非洲市场</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Competition Analysis -->
+    <section class="section section-blue">
+        <div class="container">
+            <h2 class="section-title white">竞争格局与市场颠覆</h2>
+            <p class="section-subtitle white">分散的市场与昂贵的解决方案为专业替代方案创造巨大机会</p>
+            
+            <!-- Competitive Market Share Visualization -->
+            <div style="display: flex; justify-content: center; align-items: center; margin: 60px 0; flex-wrap: wrap; gap: 60px;">
+                <div style="width: 400px; height: 400px; position: relative;">
+                    <svg class="donut-chart" viewBox="0 0 200 200" style="width: 100%; height: 100%;">
+                        <!-- Adobe: 45% -->
+                        <circle cx="100" cy="100" r="75" class="donut-segment segment-1" stroke-dasharray="212, 259" stroke-dashoffset="0"></circle>
+                        <!-- Retouch4me: 15% -->
+                        <circle cx="100" cy="100" r="75" class="donut-segment segment-2" stroke-dasharray="71, 400" stroke-dashoffset="-212"></circle>
+                        <!-- Other Solutions: 25% -->
+                        <circle cx="100" cy="100" r="75" class="donut-segment segment-3" stroke-dasharray="118, 353" stroke-dashoffset="-283"></circle>
+                        <!-- Manual Work: 12% -->
+                        <circle cx="100" cy="100" r="75" class="donut-segment segment-4" stroke-dasharray="57, 414" stroke-dashoffset="-401"></circle>
+                        <!-- Our Opportunity: 3% -->
+                        <circle cx="100" cy="100" r="75" class="donut-segment segment-5" stroke-dasharray="14, 457" stroke-dashoffset="-458"></circle>
+                    </svg>
+                    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center;">
+                        <div style="font-size: 2rem; font-weight: bold; color: white;">市场</div>
+                        <div style="font-size: 1.2rem; color: rgba(255,255,255,0.8);">分布</div>
+                    </div>
+                </div>
+                
+                <!-- Legend -->
+                <div>
+                    <div style="display: flex; flex-direction: column; gap: 15px;">
+                        <div class="legend-item">
+                            <div class="legend-color" style="background: var(--primary-red);"></div>
+                            <span class="legend-text white"><strong>Adobe解决方案</strong> - 45% (信贷限制)</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color" style="background: var(--primary-orange);"></div>
+                            <span class="legend-text white"><strong>Retouch4me</strong> - 15% (每插件$124+)</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color" style="background: var(--primary-blue);"></div>
+                            <span class="legend-text white"><strong>其他工具</strong> - 25% (分散)</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color" style="background: var(--primary-green);"></div>
+                            <span class="legend-text white"><strong>手工工作</strong> - 12% (昂贵)</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color" style="background: var(--primary-yellow);"></div>
+                            <span class="legend-text white"><strong>我们的机会</strong> - 3% (蓝海)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Detailed Competitive Analysis -->
+            <div class="competition-grid">
+                <div class="competition-card">
+                    <h3>
+                        <div class="competition-icon" style="background: var(--primary-red);">ADBE</div>
+                        Adobe的脆弱性：2024信贷危机
+                    </h3>
+                    <p style="margin-bottom: 20px;">Adobe在2024年引入限制性生成信贷系统，将专业人士限制在每月25-1000积分。PetaPixel和行业论坛报告对功能降低和成本增加的广泛抱怨。</p>
+                    
+                    <h4 style="color: var(--primary-orange); margin: 20px 0 10px;">我们的替代优势：</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li>• <strong>无限处理</strong> vs Adobe的信贷限制</li>
+                        <li>• <strong>专业化模型</strong> vs 通用生成填充</li>
+                        <li>• <strong>行业特定智能</strong> vs 一刀切</li>
+                        <li>• <strong>专业分辨率</strong> 高达15000像素</li>
+                        <li>• <strong>订阅模式</strong> vs 限制性信贷购买</li>
+                    </ul>
+                    
+                    <div style="background: rgba(231, 76, 60, 0.2); padding: 20px; border-radius: 10px; margin-top: 20px;">
+                        <h4 style="color: var(--primary-red);">市场颠覆机会</h4>
+                        <p>Adobe的信贷限制为无限、专业替代方案创造即时需求。专业人士正在积极寻求解决方案——我们提供他们所需的确切方案。</p>
+                    </div>
+                </div>
+
+                <div class="competition-card">
+                    <h3>
+                        <div class="competition-icon" style="background: var(--primary-orange);">R4ME</div>
+                        Retouch4me：优质定价脆弱性
+                    </h3>
+                    <p style="margin-bottom: 20px;">当前市场领导者每插件收费$124-149，拥有5万+用户基础。完整专业套件成本$1000+。我们的$5/月订阅模式提供所有工具的完整访问。</p>
+                    
+                    <div class="pricing-comparison">
+                        <h4 style="margin-bottom: 20px; text-align: center;">收入获取潜力</h4>
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px;">
+                            <div style="background: var(--primary-red); color: white; padding: 20px; border-radius: 10px; text-align: center;">
+                                <h4>Retouch4me</h4>
+                                <p><strong>5万</strong> 用户</p>
+                                <p>每插件$124+</p>
+                            </div>
+                            <div style="background: var(--primary-green); color: white; padding: 20px; border-radius: 10px; text-align: center;">
+                                <h4>我们的目标</h4>
+                                <p><strong>1-5%</strong> 转换</p>
+                                <p>所有工具$5/月</p>
+                            </div>
+                            <div style="background: var(--primary-orange); color: white; padding: 20px; border-radius: 10px; text-align: center;">
+                                <h4>年收入</h4>
+                                <p><strong>$3-15万</strong></p>
+                                <p>保守估计</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h4 style="color: var(--primary-orange); margin: 20px 0 10px;">竞争优势：</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li>• <strong>95%成本降低：</strong>$5/月 vs $1000+套件</li>
+                        <li>• <strong>更好的技术：</strong>材料特定AI vs 通用工具</li>
+                        <li>• <strong>专业专注：</strong>行业要求 vs 大众市场</li>
+                        <li>• <strong>持续更新：</strong>订阅模式实现快速迭代</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Processing Volume Analysis -->
+    <section class="section section-light">
+        <div class="container">
+            <h2 class="section-title">图像处理量分析</h2>
+            <p class="section-subtitle">跨垂直领域的量化市场机会，具有已验证的处理量</p>
+            
+            <div class="size-grid">
+                <div class="size-card">
+                    <div class="size-number">1500万+</div>
+                    <div class="size-label">每年市场图像</div>
+                    <div class="size-description">
+                        <strong>全球电商平台</strong><br>
+                        • 亚马逊：6亿+需要图像的产品<br>
+                        • eBay：23亿活跃带照片listings<br>
+                        • 中国（淘宝/京东）：数千万<br>
+                        • API处理潜力：每年320万图像
+                    </div>
+                </div>
+
+                <div class="size-card">
+                    <div class="size-number">980万</div>
+                    <div class="size-label">珠宝图像潜力</div>
+                    <div class="size-description">
+                        <strong>首次市场自动化</strong><br>
+                        • 美国/加拿大：每年100万图像<br>
+                        • 中国：每年500万图像<br>
+                        • 印度/亚洲：每年300万图像<br>
+                        • 欧洲：每年50万图像<br>
+                        • 拉美：每年30万图像
+                    </div>
+                </div>
+
+                <div class="size-card">
+                    <div class="size-number">200万+</div>
+                    <div class="size-label">年度婚礼照片</div>
+                    <div class="size-description">
+                        <strong>专业活动摄影</strong><br>
+                        • 美国：每年200万+婚礼<br>
+                        • 平均：每场婚礼500+照片<br>
+                        • 专业修图标准<br>
+                        • 全球扩张乘数效应
+                    </div>
+                </div>
+
+                <div class="size-card">
+                    <div class="size-number">40万+</div>
+                    <div class="size-label">专业摄影师</div>
+                    <div class="size-description">
+                        <strong>全球专业基础</strong><br>
+                        • 美国/加拿大：11.5万 (BLS 2022)<br>
+                        • 欧洲：5万 (FEP)<br>
+                        • 中国：10万+<br>
+                        • 印度/亚洲：10万+<br>
+                        • 拉美：3-5万
+                    </div>
+                </div>
+
+                <div class="size-card">
+                    <div class="size-number">50-75%</div>
+                    <div class="size-label">需要修图的图像</div>
+                    <div class="size-description">
+                        <strong>专业标准合规性</strong><br>
+                        • 市场质量要求<br>
+                        • 品牌一致性需求<br>
+                        • 转换优化需求<br>
+                        • 专业作品集标准
+                    </div>
+                </div>
+
+                <div class="size-card">
+                    <div class="size-number">95%</div>
+                    <div class="size-label">毛利率</div>
+                    <div class="size-description">
+                        <strong>可扩展的单位经济学</strong><br>
+                        • 当前成本：每图$0.05<br>
+                        • 目标成本：每图$0.02<br>
+                        • 销售价格：每图$1.00+<br>
+                        • vs手工处理50倍优势
+                    </div>
+                </div>
+
+                <div class="size-card">
+                    <div class="size-number">24/7</div>
+                    <div class="size-label">自动化处理</div>
+                    <div class="size-description">
+                        <strong>不停全球运营</strong><br>
+                        • 无人力限制<br>
+                        • 一致的质量标准<br>
+                        • 立即扩展到数百万<br>
+                        • 多时区服务覆盖
+                    </div>
+                </div>
+
+                <div class="size-card">
+                    <div class="size-number">100+</div>
+                    <div class="size-label">每月聊天机器人用户</div>
+                    <div class="size-description">
+                        <strong>已验证市场验证</strong><br>
+                        • Telegram/WhatsApp集成活跃<br>
+                        • 直接消费者访问运行中<br>
+                        • 已验证付费意愿<br>
+                        • 可扩展移动优先方法
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Stack -->
+    <section class="section section-white">
+        <div class="container">
+            <h2 class="section-title">专有技术组合</h2>
+            <p class="section-subtitle">20+训练模型、100+ LoRAs、专利申请创新构建3+年竞争护城河</p>
+            
+            <div class="tech-grid">
+                <div class="tech-card">
+                    <div class="tech-image">
+                        <img src="images/site/diffusion_models.jpg" alt="扩散模型插图">
+                    </div>
+                    <h3>定制扩散模型</h3>
+                    <p>基于250万+专业标注图像训练的行业特定SDXL和Flux适应。每个模型理解珠宝、服装和汽车行业的材料特性、照明条件和专业标准。</p>
+                </div>
+
+                <div class="tech-card">
+                    <div class="tech-image">
+                        <img src="images/site/yolo_visualization.jpg" alt="YOLO检测可视化">
+                    </div>
+                    <h3>计算机视觉管道</h3>
+                    <p>材料分类99.7%准确率的实时物体检测。定制训练的YOLO模型识别珠宝组件、面料类型和产品类别进行有针对性的处理工作流程。</p>
+                </div>
+
+                <div class="tech-card">
+                    <div class="tech-image">
+                        <img src="images/site/color_checker_tech.jpg" alt="色彩检查器技术">
+                    </div>
+                    <h3>虚拟色彩检查器</h3>
+                    <p>正在申请专利的技术嵌入虚拟参考点进行自动色彩校正。在保持所有照明条件下的专业准确性的同时，消除对物理色卡的需求。</p>
+                </div>
+
+                <div class="tech-card">
+                    <div class="tech-image">
+                        <img src="images/site/high_res_tech.jpg" alt="高分辨率技术">
+                    </div>
+                    <h3>专业级处理</h3>
+                    <p>专有算法处理每边高达15000像素的图像。内存高效分块在为商业工作流程优化处理速度的同时保持专业级质量。</p>
+                </div>
+            </div>
+
+            <div style="margin-top: 60px; padding: 40px; background: var(--light-gray); border-radius: 20px; border: 1px solid #e9ecef;">
+                <h3 style="color: var(--dark-blue); margin-bottom: 30px; text-align: center;">技术差异化</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px;">
+                    <div>
+                        <h4 style="color: var(--primary-orange); margin-bottom: 15px;">独特数据集创建</h4>
+                        <p style="color: var(--medium-gray);">60+年综合修图经验创建专有训练数据集。我们的团队确切知道跨行业专业结果应该是什么样子。</p>
+                    </div>
+                    <div>
+                        <h4 style="color: var(--primary-orange); margin-bottom: 15px;">材料物理学理解</h4>
+                        <p style="color: var(--medium-gray);">与通用AI工具不同，我们的模型理解光相互作用的物理学：金属反射系数、面料吸收模式、玻璃折射指数。</p>
+                    </div>
+                    <div>
+                        <h4 style="color: var(--primary-orange); margin-bottom: 15px;">专业工作流专注</h4>
+                        <p style="color: var(--medium-gray);">每个功能都解决真实的专业痛点，而非理论用例。15+年实际行业经验驱动每个技术决策。</p>
+                    </div>
+                    <div>
+                        <h4 style="color: var(--primary-orange); margin-bottom: 15px;">专利组合保护</h4>
+                        <p style="color: var(--medium-gray);">虚拟色彩检查器、自动化珠宝增强和材料感知超分辨率的多项专利申请创建强大的IP护城河。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Global Presence - Updated with UK and Asia -->
+    <section class="section section-blue">
+        <div class="container">
+            <h2 class="section-title white">全球运营与战略合作伙伴关系</h2>
+            <p class="section-subtitle white">跨关键市场具有本地专业知识和既定合作伙伴关系的七国布局</p>
+            
+            <div class="presence-grid">
+                <div class="presence-card">
+                    <h3>
+                        <div class="presence-flag" style="background: var(--primary-teal);">阿根廷</div>
+                        布宜诺斯艾利斯，阿根廷
+                    </h3>
+                    <span class="status active">总部</span>
+                    <p>包括15+开发人员、2名博士研究员和营销专家的35人团队主要运营中心。战略位置与硅谷相比提供<strong>70%成本优势</strong>，同时获得顶级拉美人才库。</p>
+                </div>
+                
+                <div class="presence-card">
+                    <h3>
+                        <div class="presence-flag" style="background: var(--primary-red);">美国</div>
+                        纽约，美国
+                    </h3>
+                    <span class="status active">活跃运营</span>
+                    <p>专职市场经理具有与本地公司合作的<strong>8个月已验证业绩记录</strong>。通过既定专业网络和市场渗透从美国客户产生<strong>每月$1K+收入</strong>。</p>
+                </div>
+                
+                <div class="presence-card">
+                    <h3>
+                        <div class="presence-flag" style="background: var(--primary-orange);">德国</div>
+                        德国
+                    </h3>
+                    <span class="status active">战略合作伙伴关系</span>
+                    <p><strong>PICPOINT GmbH</strong>合作伙伴关系在德国市场和电商摄影方面提供<strong>15+年经验</strong>。与主要德国零售商的已验证业绩记录和既定市场集成。</p>
+                </div>
+
+                <div class="presence-card">
+                    <h3>
+                        <div class="presence-flag" style="background: var(--primary-blue);">英国</div>
+                        英国
+                    </h3>
+                    <span class="status active">客户合作伙伴关系</span>
+                    <p><strong>Etouchcreate</strong>合作伙伴关系与总经理认可。与英国珠宝和电商摄影市场的既定关系。<strong>每张产品照片£10-30</strong>标准的优质定价市场。</p>
+                </div>
+                
+                <div class="presence-card">
+                    <h3>
+                        <div class="presence-flag" style="background: var(--primary-green);">中国</div>
+                        中国
+                    </h3>
+                    <span class="status planned">社区参与</span>
+                    <p>与<strong>本地AI研究机构</strong>和摄影社区的积极初步参与。全球最大的制造和电商市场。与主要中国摄影工作室的合作伙伴讨论进行中。</p>
+                </div>
+
+                <div class="presence-card">
+                    <h3>
+                        <div class="presence-flag" style="background: var(--primary-yellow);">新加坡</div>
+                        亚太地区
+                    </h3>
+                    <span class="status planned">战略分析</span>
+                    <p><strong>APAC市场扩张</strong>的新加坡中心战略。进入东南亚电商繁荣和区域摄影服务。通往具有<strong>8.1% CAGR增长率</strong>的澳大利亚、日本和新兴亚洲市场的门户。</p>
+                </div>
+                
+                <div class="presence-card">
+                    <h3>
+                        <div class="presence-flag" style="background: var(--primary-blue);">阿联酋</div>
+                        阿联酋
+                    </h3>
+                    <span class="status planned">高级谈判</span>
+                    <p>与具有<strong>20+年区域经验</strong>的知名中东摄影师<strong>签署LOI</strong>。通往具有既定专业网络和区域专业知识的中东和非洲市场的门户。</p>
+                </div>
+                
+                <div class="presence-card">
+                    <h3>
+                        <div class="presence-flag" style="background: var(--primary-yellow);">印度</div>
+                        印度
+                    </h3>
+                    <span class="status planned">市场分析</span>
+                    <p><strong>$68亿摄影服务市场</strong>的综合分析。全球修图服务的主要外包目的地。与领先的印度数字代理和工作室确定技术合作伙伴关系。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Testimonials -->
+    <section class="section section-blue">
+        <div class="container">
+            <h2 class="section-title white">客户成功案例</h2>
+            <p class="section-subtitle white">跨多个行业企业和专业人士的已验证结果</p>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "我全心全意地推荐Anastasiya Butova和她的公司ois.gold。这项工作所需的技能非常专业。真正缺乏能达到这种水平的人才。我预见ois.gold的主要优势是其解决方案提供的质量大大提高以及时间的巨大节省。"
+                    </div>
+                    <div class="testimonial-author">Paul Miller</div>
+                    <div class="testimonial-company">总经理，Etouchcreate，英国</div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "结果超出了我的预期——即使原始图像质量较低，也能根据珠宝修图的所有准则完成完美的作品。这是一个绝妙的工具，让您摆脱单调的手工劳动，为更重要的事情释放大量时间。"
+                    </div>
+                    <div class="testimonial-author">专业修图师</div>
+                    <div class="testimonial-company">企业客户</div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "我已经自动化了所有工作，我处理图片和目录。一切都变得更快，工作加速了2倍。金属变得漂亮，眩光和反射被平滑，我几乎从不需要修正它。"
+                    </div>
+                    <div class="testimonial-author">Anastasia</div>
+                    <div class="testimonial-company">课程毕业生</div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "多亏了这门课程，工作质量和完成速度都显著提高了。我们的员工参加了Anastasia Butova的'神经网络修图'课程，结果非常出色。"
+                    </div>
+                    <div class="testimonial-author">Natalia Mikhailovna Sorokina</div>
+                    <div class="testimonial-company">SK Sorokin珠宝生产</div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "现在，多亏了课程，我能够快速处理图像并向客户展示我工作的真实质量。完成课程后，我继续关注Anastasia的工作和额外材料。"
+                    </div>
+                    <div class="testimonial-author">Yulia Pavlovna Petoeva</div>
+                    <div class="testimonial-company">个体企业家，珠宝生产</div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "我负责任地声明，我的工作速度显著提高，质量也略有提升。特别感谢Anastasia在课程期间和完成后的持续支持和反馈。"
+                    </div>
+                    <div class="testimonial-author">Tatiana Korneva</div>
+                    <div class="testimonial-company">专业珠宝与物体修图师</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Financial Projections -->
+    <section class="section section-white">
+        <div class="container">
+            <h2 class="section-title">商业模式与增长指标</h2>
+            <p class="section-subtitle">跨多个增长向量的可扩展经济学和已验证收入流</p>
+            
+            <div class="revenue-model">
+                <div class="revenue-card">
+                    <div class="revenue-amount">$8,000</div>
+                    <div class="revenue-period">首次企业销售</div>
+                    <div class="revenue-details">主要珠宝公司(diamant-online.ru)购买定制系统。立即ROI演示的概念验证。客户扩展到100%保留率的月度处理。</div>
+                </div>
+
+                <div class="revenue-card">
+                    <div class="revenue-amount">1,000+</div>
+                    <div class="revenue-period">每月文件</div>
+                    <div class="revenue-details">跨经常性客户的一致月度处理量。100%客户保留率的稳定收入增长。25%月环比量增长趋势。</div>
+                </div>
+
+                <div class="revenue-card">
+                    <div class="revenue-amount">$1.00</div>
+                    <div class="revenue-period">起始价格/图像</div>
+                    <div class="revenue-details">珠宝修图起始价格。当前成本：$0.05，目标：$0.02。规模化的95%+利润率，提供优质专业质量。</div>
+                </div>
+
+                <div class="revenue-card">
+                    <div class="revenue-amount">$5</div>
+                    <div class="revenue-period">月度订阅</div>
+                    <div class="revenue-details">综合插件套件的SaaS模式。比Retouch4me便宜95%，同时提供优越功能。保守预测：来自竞争对手用户基础的$3-15万年收入。</div>
+                </div>
+
+                <div class="revenue-card">
+                    <div class="revenue-amount">3</div>
+                    <div class="revenue-period">收入流</div>
+                    <div class="revenue-details">按图像付费处理、SaaS订阅和企业许可。多元化模式在最大化跨市场段增长潜力的同时降低风险。</div>
+                </div>
+
+                <div class="revenue-card">
+                    <div class="revenue-amount">95%</div>
+                    <div class="revenue-period">毛利率</div>
+                    <div class="revenue-details">具有最小边际成本的可扩展经济学。比手工处理50倍成本优势。量规模化在保持优质定价的同时降低单位成本。</div>
+                </div>
+            </div>
+
+            <div class="data-sources">
+                <h3 style="color: var(--dark-blue); margin-bottom: 30px; text-align: center;">双产品策略</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 40px;">
+                    <div style="text-align: center; padding: 30px; background: var(--light-gray); border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); border: 1px solid #e9ecef;">
+                        <h4 style="color: var(--primary-orange); margin-bottom: 20px; font-size: 1.5rem;">OIS.Gold</h4>
+                        <p style="margin-bottom: 20px;"><strong>珠宝行业专注</strong></p>
+                        <ul style="text-align: left; color: var(--medium-gray); line-height: 1.8;">
+                            <li>• 自动化珠宝修图（首次市场）</li>
+                            <li>• 珠宝可视化数字模型生成</li>
+                            <li>• 产品视频神经网络动画</li>
+                            <li>• 完整珠宝电商工作流程</li>
+                            <li>• 行业特定质量标准</li>
+                        </ul>
+                    </div>
+                    <div style="text-align: center; padding: 30px; background: var(--light-gray); border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); border: 1px solid #e9ecef;">
+                        <h4 style="color: var(--primary-blue); margin-bottom: 20px; font-size: 1.5rem;">HappyIn.AI</h4>
+                        <p style="margin-bottom: 20px;"><strong>专业修图套件</strong></p>
+                        <ul style="text-align: left; color: var(--medium-gray); line-height: 1.8;">
+                            <li>• Photoshop生成填充替代</li>
+                            <li>• 服装和纺织品修图</li>
+                            <li>• 隐形模特创建</li>
+                            <li>• 汽车和室内摄影</li>
+                            <li>• 跨行业专业工具</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="section section-white">
+        <div class="container">
+            <h2 class="section-title">我们的世界级团队</h2>
+            <p class="section-subtitle">跨5个国家拥有深厚行业专业知识和已验证业绩记录的35名专家</p>
+            
+            <div class="team-stats">
+                <div class="team-stat">
+                    <h3>60+</h3>
+                    <p>年综合修图经验</p>
+                </div>
+                <div class="team-stat">
+                    <h3>12</h3>
+                    <p>种语言</p>
+                </div>
+                <div class="team-stat">
+                    <h3>2</h3>
+                    <p>博士学位持有者</p>
+                </div>
+                <div class="team-stat">
+                    <h3>3</h3>
+                    <p>年未来竞争对手经验</p>
+                </div>
+                <div class="team-stat">
+                    <h3>35</h3>
+                    <p>全球团队成员</p>
+                </div>
+            </div>
+            
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="member-photo">
+                        <img src="images/team/anastasia_butova.jpg" alt="Anastasia Butova">
+                    </div>
+                    <div class="member-name">Anastasia Butova</div>
+                    <div class="member-role">创始人兼CEO</div>
+                    <div class="member-description">15+年珠宝修图经验。创建首个AI珠宝修图模型。负责战略、商业发展和长期愿景。领导公司从概念到$8K首次销售。</div>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-photo">
+                        <img src="images/team/sergey_afonchenko.jpg" alt="Sergey Afonchenko">
+                    </div>
+                    <div class="member-name">Sergey Afonchenko</div>
+                    <div class="member-role">CTO</div>
+                    <div class="member-description">高负载系统和可扩展架构专家。领导技术开发和团队成长。确保全球客户基础的企业级解决方案。曾在主要科技公司工作经验。</div>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-photo">
+                        <img src="images/team/ksenia_zhivaeva.jpg" alt="Ksenia Zhivaeva">
+                    </div>
+                    <div class="member-name">Ksenia Zhivaeva</div>
+                    <div class="member-role">客户关系主管</div>
+                    <div class="member-description">管理合作伙伴关系和商业发展的客户关系专家。监督俄罗斯市场扩张和国际客户满意度。负责战略合作伙伴关系和收入增长。</div>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-photo">
+                        <img src="images/team/galina_khurshudyan.jpg" alt="Galina Khurshudyan">
+                    </div>
+                    <div class="member-name">Galina Khurshudyan</div>
+                    <div class="member-role">技术测试主管</div>
+                    <div class="member-description">神经网络模型的综合评估和集成。生成式AI技术的系统测试、错误识别和工作流程优化方法论开发。</div>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-photo">
+                        <img src="images/team/anastasia_ilyukhina.jpg" alt="Anastasia Ilyukhina">
+                    </div>
+                    <div class="member-name">Anastasia Ilyukhina</div>
+                    <div class="member-role">AI专家</div>
+                    <div class="member-description">数据集优化和神经网络训练专家。最优模型设置的选择和分析。数据科学团队管理和模型性能分析。模型合并专家。</div>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-photo">
+                        <img src="images/team/vasilina_sergeeva.jpg" alt="Vasilina Sergeeva">
+                    </div>
+                    <div class="member-name">Vasilina Sergeeva</div>
+                    <div class="member-role">AI研究员（博士）</div>
+                    <div class="member-description">分子遗传学博士，在生物医学方面具有机器学习专业知识。多语言研究员（8种语言），为AI开发带来科学严谨性。学术级研究方法进行技术创新。</div>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-photo">
+                        <img src="images/team/tatiana_rogozina.jpg" alt="Tatiana Rogozina">
+                    </div>
+                    <div class="member-name">Tatiana Rogozina</div>
+                    <div class="member-role">高级后端开发工程师</div>
+                    <div class="member-description">16+年IT经验。Java/Kotlin专家，具有微服务架构专业知识。高负载系统的企业级后端开发。曾在金融科技和政府平台工作经验。</div>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-photo">
+                        <img src="images/team/tatiana_android.jpg" alt="Tatiana Android Developer">
+                    </div>
+                    <div class="member-name">Tatiana [Android]</div>
+                    <div class="member-role">Android与后端开发工程师</div>
+                    <div class="member-description">15+年软件开发经验。具有数学背景的Android专家。后端开发专业知识。专注于移动解决方案和跨平台开发。</div>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-photo">
+                        <img src="images/team/andrei_anufrienko.jpg" alt="Andrei Anufrienko">
+                    </div>
+                    <div class="member-name">Andrei Anufrienko</div>
+                    <div class="member-role">首席UI/UX设计师</div>
+                    <div class="member-description">复杂设计解决方案和用户体验策略专家。创建高质量界面原型和设计系统。确保所有开发阶段的视觉完整性。</div>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-photo">
+                        <img src="images/team/vera_volodina.jpg" alt="Vera Volodina">
+                    </div>
+                    <div class="member-name">Vera Volodina</div>
+                    <div class="member-role">视觉传达设计师</div>
+                    <div class="member-description">创建连贯视觉传达的品牌识别专家。管理所有平台的企业设计一致性。开发营销材料和演示设计。</div>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-photo">
+                        <img src="images/team/anna_shumskaia.jpg" alt="Anna Shumskaia">
+                    </div>
+                    <div class="member-name">Anna Shumskaia</div>
+                    <div class="member-role">平面设计师</div>
+                    <div class="member-description">具有建筑背景的多学科设计师。专门从事平面设计、插图和动画。视觉叙事和跨学科设计方法专家。</div>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-photo">
+                        <img src="images/team/tatyana_fyforieva.jpg" alt="Tatyana Fyforieva">
+                    </div>
+                    <div class="member-name">Tatyana Fyforieva</div>
+                    <div class="member-role">营销总监</div>
+                    <div class="member-description">跨高增长行业10+年数字营销经验。媒体购买、付费社交和CPA策略专家。曾在主要公司管理百万美元预算的经验。</div>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-photo">
+                        <img src="images/team/anna_podkolzina.jpg" alt="Anna Podkolzina">
+                    </div>
+                    <div class="member-name">Anna Podkolzina</div>
+                    <div class="member-role">媒体购买专家</div>
+                    <div class="member-description">16+年营销经验，6年移动营销专业化。前Yandex员工，具有ASO专业知识。高级媒体购买和应用推广专家。</div>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-photo">
+                        <img src="images/team/alina_meollman.jpg" alt="Alina Meollman">
+                    </div>
+                    <div class="member-name">Alina Meollman</div>
+                    <div class="member-role">德国市场合作伙伴</div>
+                    <div class="member-description">PICPOINT GmbH创始人，在德国电商摄影方面具有15+年经验。与主要德国市场和零售商的既定关系。战略欧洲市场进入。</div>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-photo">
+                        <img src="images/team/team_member_15.jpg" alt="Team Member 15">
+                    </div>
+                    <div class="member-name">团队成员 15</div>
+                    <div class="member-role">专家职位</div>
+                    <div class="member-description">为我们不断增长的组织贡献专业专长的额外团队成员。我们跨五个国家35人全球团队的一部分。</div>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-photo">
+                        <img src="images/team/team_member_16.jpg" alt="Team Member 16">
+                    </div>
+                    <div class="member-name">团队成员 16</div>
+                    <div class="member-role">专家职位</div>
+                    <div class="member-description">为我们不断增长的组织贡献专业专长的额外团队成员。我们跨五个国家35人全球团队的一部分。</div>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-photo">
+                        <img src="images/team/team_member_17.jpg" alt="Team Member 17">
+                    </div>
+                    <div class="member-name">团队成员 17</div>
+                    <div class="member-role">专家职位</div>
+                    <div class="member-description">为我们不断增长的组织贡献专业专长的额外团队成员。我们跨五个国家35人全球团队的一部分。</div>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-photo">
+                        <img src="images/team/team_member_18.jpg" alt="Team Member 18">
+                    </div>
+                    <div class="member-name">团队成员 18</div>
+                    <div class="member-role">专家职位</div>
+                    <div class="member-description">为我们不断增长的组织贡献专业专长的额外团队成员。我们跨五个国家35人全球团队的一部分。</div>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-photo">
+                        <img src="images/team/team_member_19.jpg" alt="Team Member 19">
+                    </div>
+                    <div class="member-name">团队成员 19</div>
+                    <div class="member-role">专家职位</div>
+                    <div class="member-description">为我们不断增长的组织贡献专业专长的额外团队成员。我们跨五个国家35人全球团队的一部分。</div>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-photo">
+                        <img src="images/team/team_member_20.jpg" alt="Team Member 20">
+                    </div>
+                    <div class="member-name">团队成员 20</div>
+                    <div class="member-role">专家职位</div>
+                    <div class="member-description">为我们不断增长的组织贡献专业专长的额外团队成员。我们跨五个国家35人全球团队的一部分。</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>加入AI修图革命</h2>
+                <p style="font-size: 1.4rem; margin-bottom: 20px;">$502亿市场 • 先发优势 • 95%利润率 • 全球扩张就绪</p>
+                <p style="font-size:
